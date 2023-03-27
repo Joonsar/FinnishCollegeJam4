@@ -10,7 +10,8 @@ public class PlayerScript : MonoBehaviour
     public int maxHealth = 100;
     public int health = 100;
     public int level = 1;
-    public float exp = 0;
+    public float exp = 0f;
+    public int damage = 5;
     private Rigidbody rb;
     private Vector3 movement;
 
@@ -54,7 +55,7 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        AddExperience(0.01f);
+        //AddExperience(0.01f);
 
 
 
@@ -89,7 +90,8 @@ public class PlayerScript : MonoBehaviour
 
     public void AddExperience(float amount)
     {
-        if (exp >= 1f)
+        exp += amount;
+        if (exp >= 1.0f)
         {
             level++;
             exp = 0f;
@@ -99,5 +101,17 @@ public class PlayerScript : MonoBehaviour
 
 
         uiController.GetComponent<UIController>().AdjustLevelSlider(amount);
+    }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.gameObject.CompareTag("Enemy"))
+        {
+            coll.gameObject.GetComponent<EnemyHealth>().TakeDamage((float)damage);
+            Debug.Log(coll.gameObject.name + " took " + damage + " damage");
+            //Destroy(coll.gameObject);
+
+
+        }
     }
 }

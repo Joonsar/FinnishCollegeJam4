@@ -5,6 +5,12 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float hitPoints = 100f;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     // create public method which reduses hitpoints by the amount of damage
     public void TakeDamage(float damage)
@@ -13,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
         hitPoints -= damage;
         if (hitPoints <= 0)
         {
+            player.GetComponent<PlayerScript>().AddExperience(0.1f);
             Destroy(gameObject);
         }
     }
