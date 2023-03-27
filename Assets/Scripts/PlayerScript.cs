@@ -54,7 +54,7 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        AddExperience(0.01f);
+        //AddExperience(0.01f);
 
 
 
