@@ -11,7 +11,7 @@ public class PlayerScript : MonoBehaviour
     public int health = 100;
     public int level = 1;
     public float exp = 0f;
-    public int damage = 5;
+    public int damage = 4;
     private Rigidbody rb;
     private Vector3 movement;
 
@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        //AddExperience(0.01f);
+        TakeDamage(1);
 
 
 
@@ -72,6 +72,7 @@ public class PlayerScript : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
+        uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(amount);
         CheckDeath();
     }
 
