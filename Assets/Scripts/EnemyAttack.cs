@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
 {
     
     PlayerScript target;
-    [SerializeField] float damage = 40f;
+    [SerializeField] int damage = 40;
 
 
     void Start()
@@ -16,7 +16,10 @@ public class EnemyAttack : MonoBehaviour
 
     public void AttackHitEvent()
     {
+        if (target == null) return;
+       // target.GetComponent<PlayerScript>().TakeDamage(damage);
+        target.TakeDamage(damage);
+        Debug.Log("Bang bang");
 
-       
     }
 }

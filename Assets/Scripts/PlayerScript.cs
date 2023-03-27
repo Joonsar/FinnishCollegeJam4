@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -37,13 +38,13 @@ public class PlayerScript : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.y = transform.position.y;
 
-
         Vector3 lookDir = mousePosition - transform.position;
         lookDir.y = 0;
         //Debug.Log(lookDir);
         Quaternion rotation = Quaternion.LookRotation(lookDir.normalized);
         // transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotateSpeed * Time.fixedDeltaTime);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+        UpdateAnimator();
 
 
     }
@@ -59,7 +60,13 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-
+    private void UpdateAnimator()
+    {
+        Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
+        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+        float speed = localVelocity.z;
+        GetComponent<Animator>().SetFloat("forwardSpeed", speed);
+    }
 
     public void TakeDamage(int amount)
     {
