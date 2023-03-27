@@ -18,11 +18,18 @@ public class TileManager : MonoBehaviour
     public int pickupsMax = 2;
     public List<Vector3> pickupLocations;
 
+    [Header("ClutterSpawns")]
+    public List<GameObject> clutterObjects;
+    public int clutterObjectsMin = 5;
+    public int clutterObjectsMax = 12;
+    public List<Vector3> clutterLocations;
+
     // Start is called before the first frame update
     void Start()
     {
         SpawnVehicles();
         SpawnPickups();
+        SpawnClutter();
     } 
 
     void SpawnVehicles ()
@@ -47,6 +54,17 @@ public class TileManager : MonoBehaviour
         }
     }
 
+    void SpawnClutter()
+    {
+        int clutterCount = clutterObjectsMin + (int)(Random.value * (clutterObjectsMax - clutterObjectsMin));
+        for (int i = 0; i < clutterCount; i++)
+        {
+            int location = (int)(Random.value * clutterLocations.Count);
+            GameObject clutter = Instantiate(clutterObjects[(int)(Random.value * clutterObjects.Count)], transform.position + clutterLocations[location], Quaternion.Euler(Vector3.up * Random.value * 360));
+            clutterLocations.RemoveAt(location);
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         foreach(Vector3 plot in plots)
@@ -63,6 +81,11 @@ public class TileManager : MonoBehaviour
         {
             Gizmos.color = Color.red;
             Gizmos.DrawCube(transform.position + loc, Vector3.one);
+        }
+        foreach (Vector3 loc in clutterLocations)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawCube(transform.position + loc, Vector3.one / 2);
         }
     }
 }
