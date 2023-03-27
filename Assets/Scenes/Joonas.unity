@@ -500,7 +500,7 @@ MonoBehaviour:
   health: 100
   level: 1
   exp: 0
-  uiController: {fileID: 623156867}
+  uiController: {fileID: 623156865}
 --- !u!54 &720049171
 Rigidbody:
   m_ObjectHideFlags: 0

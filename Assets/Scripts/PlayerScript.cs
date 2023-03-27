@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
     private Vector3 mousePosition;
     private List<Skill> skills;
 
-    public UIController uiController;
+    public GameObject uiController;
 
 
     // Start is called before the first frame update
@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         skills = new List<Skill>();
+
     }
 
     // Update is called once per frame
@@ -88,6 +89,7 @@ public class PlayerScript : MonoBehaviour
             uiController.GetComponent<UIController>().ChangeLevelText("Level " + level);
             uiController.GetComponent<UIController>().SetLevelSlider(0f);
         }
+
 
         uiController.GetComponent<UIController>().AdjustLevelSlider(amount);
     }
