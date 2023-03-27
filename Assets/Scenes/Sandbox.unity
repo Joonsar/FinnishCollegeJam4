@@ -1304,8 +1304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnemies: 200
-  spawnRange: 3
-  player: {fileID: 0}
   terrain: {fileID: 422114297}
   enemyPrefab: {fileID: 927712175480350751, guid: d1545fc1543db6943a51694c89fb9bb9, type: 3}
 --- !u!4 &272167357
@@ -12197,6 +12195,10 @@ PrefabInstance:
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 12469572072521150, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: damage
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521150, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: uiController

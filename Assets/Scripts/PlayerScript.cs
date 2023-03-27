@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     public int health = 100;
     public int level = 1;
     public float exp = 0f;
+    public int damage = 5;
     private Rigidbody rb;
     private Vector3 movement;
 
@@ -93,5 +94,17 @@ public class PlayerScript : MonoBehaviour
 
 
         uiController.GetComponent<UIController>().AdjustLevelSlider(amount);
+    }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.gameObject.CompareTag("Enemy"))
+        {
+            coll.gameObject.GetComponent<EnemyHealth>().TakeDamage((float)damage);
+            Debug.Log(coll.gameObject.name + " took " + damage + " damage");
+            //Destroy(coll.gameObject);
+
+
+        }
     }
 }
