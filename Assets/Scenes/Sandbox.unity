@@ -1274,6 +1274,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256867881}
   m_CullTransparentMesh: 1
+--- !u!1 &272167355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 272167357}
+  - component: {fileID: 272167356}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &272167356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272167355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec551efb37b6744790f1571cc60d064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemies: 200
+  spawnRange: 3
+  player: {fileID: 0}
+  terrain: {fileID: 422114297}
+  enemyPrefab: {fileID: 927712175480350751, guid: d1545fc1543db6943a51694c89fb9bb9, type: 3}
+--- !u!4 &272167357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272167355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 64.3, y: 1.4764776, z: 81.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &273391987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7247,7 +7296,7 @@ GameObject:
   - component: {fileID: 1287119600}
   - component: {fileID: 1287119599}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12111,7 +12160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.91
+      value: 63.9
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12119,7 +12168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.36
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_LocalRotation.w
