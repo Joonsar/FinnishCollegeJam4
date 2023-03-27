@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     public int maxHealth = 100;
     public int health = 100;
     public int level = 1;
-    public float exp = 0;
+    public float exp = 0f;
     private Rigidbody rb;
     private Vector3 movement;
 
@@ -82,7 +82,8 @@ public class PlayerScript : MonoBehaviour
 
     public void AddExperience(float amount)
     {
-        if (exp >= 1f)
+        exp += amount;
+        if (exp >= 1.0f)
         {
             level++;
             exp = 0f;
