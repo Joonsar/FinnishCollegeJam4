@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    
+
     PlayerScript target;
     [SerializeField] float damage = 40f;
 
@@ -17,6 +17,6 @@ public class EnemyAttack : MonoBehaviour
     public void AttackHitEvent()
     {
 
-       
+        target.TakeDamage(1);
     }
 }
