@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 
     private List<GameObject> enemies;
 
-    public GameObject player;
+    private GameObject player;
 
     public Terrain terrain;
 
