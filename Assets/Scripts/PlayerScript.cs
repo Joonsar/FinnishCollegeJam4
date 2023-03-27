@@ -9,12 +9,14 @@ public class PlayerScript : MonoBehaviour
     public int maxHealth = 100;
     public int health = 100;
     public int level = 1;
-    public int exp = 0;
+    public float exp = 0;
     private Rigidbody rb;
     private Vector3 movement;
 
     private Vector3 mousePosition;
     private List<Skill> skills;
+
+    public UIController uiController;
 
 
     // Start is called before the first frame update
@@ -37,9 +39,10 @@ public class PlayerScript : MonoBehaviour
 
         Vector3 lookDir = mousePosition - transform.position;
         lookDir.y = 0;
-        Debug.Log(lookDir);
+        //Debug.Log(lookDir);
         Quaternion rotation = Quaternion.LookRotation(lookDir.normalized);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotateSpeed * Time.fixedDeltaTime);
+        // transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotateSpeed * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
 
 
     }
@@ -49,6 +52,7 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        AddExperience(0.01f);
 
 
 
@@ -56,12 +60,13 @@ public class PlayerScript : MonoBehaviour
 
 
 
-    void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         health -= amount;
+        CheckDeath();
     }
 
-    void CheckDeath()
+    public void CheckDeath()
     {
         if (health <= 0)
         {
@@ -71,6 +76,19 @@ public class PlayerScript : MonoBehaviour
 
     public void Die()
     {
+        //game over
+    }
 
+    public void AddExperience(float amount)
+    {
+        if (exp >= 1f)
+        {
+            level++;
+            exp = 0f;
+            uiController.GetComponent<UIController>().ChangeLevelText("Level " + level);
+            uiController.GetComponent<UIController>().SetLevelSlider(0f);
+        }
+
+        uiController.GetComponent<UIController>().AdjustLevelSlider(amount);
     }
 }
