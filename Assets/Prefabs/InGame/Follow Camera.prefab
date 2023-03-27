@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4539836314652009015
+--- !u!1 &3208522699527739399
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4539836314652009013}
-  - component: {fileID: 4539836314652009012}
+  - component: {fileID: 3208522699527739397}
+  - component: {fileID: 3208522699527739396}
   m_Layer: 0
-  m_Name: FollowCamera
+  m_Name: Follow Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4539836314652009013
+--- !u!4 &3208522699527739397
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539836314652009015}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 3208522699527739399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.91, y: 0.88, z: 32.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5723639955572800664}
+  - {fileID: 6694670392617240232}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4539836314652009012
+--- !u!114 &3208522699527739396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539836314652009015}
+  m_GameObject: {fileID: 3208522699527739399}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62e79de6e9b505e4994ca7550ee10dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4539836314652009013}
---- !u!1 &5723639955572800667
+  target: {fileID: 0}
+--- !u!1 &6694670392617240235
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,9 +54,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5723639955572800664}
-  - component: {fileID: 5723639955572800665}
-  - component: {fileID: 5723639955572800666}
+  - component: {fileID: 6694670392617240232}
+  - component: {fileID: 6694670392617240233}
+  - component: {fileID: 6694670392617240234}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -64,28 +64,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5723639955572800664
+--- !u!4 &6694670392617240232
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5723639955572800667}
-  m_LocalRotation: {x: -0.394294, y: -0.0063434527, z: 0.002721788, w: -0.9189584}
+  m_GameObject: {fileID: 6694670392617240235}
+  m_LocalRotation: {x: -0.39429402, y: -0.006343453, z: 0.0027217881, w: -0.9189585}
   m_LocalPosition: {x: 0.027736664, y: 7.4456224, z: -5.951309}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4539836314652009013}
+  m_Father: {fileID: 3208522699527739397}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 13.704, y: 187.136, z: -1.55}
---- !u!20 &5723639955572800665
+--- !u!20 &6694670392617240233
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5723639955572800667}
+  m_GameObject: {fileID: 6694670392617240235}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -122,11 +122,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5723639955572800666
+--- !u!81 &6694670392617240234
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5723639955572800667}
+  m_GameObject: {fileID: 6694670392617240235}
   m_Enabled: 1
