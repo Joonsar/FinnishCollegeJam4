@@ -71,9 +71,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plots:
   - {x: 10, y: 0, z: 5}
-  walled: 0
-  wall: {fileID: 1870082208004184, guid: 8feb2335a05b64642a1d35a6a73cb21c, type: 3}
-  wallDir: {x: 7, y: 0, z: 0}
+  vehicles:
+  - {fileID: 1254837790230190, guid: 34706970fd8733440a9c0f23206a856e, type: 3}
+  - {fileID: 1344106213341860, guid: 9e3d7d4d81beecf44b4a9e5768cd8123, type: 3}
+  - {fileID: 1054208194594048, guid: 2c8381f8275e52f4fa749cd18f2833df, type: 3}
+  - {fileID: 1114800656084530, guid: faef3979cb833bd418b09d6b70c540d0, type: 3}
+  - {fileID: 1635034344049306, guid: c0093395f1e71bc4c934799299a7a48b, type: 3}
+  - {fileID: 1362285035416148, guid: b1d23a1e853d53f4086ec55a196d057b, type: 3}
+  - {fileID: 1938635135940110, guid: ebd0e90cdd8572142b5395fd3ad58a26, type: 3}
+  - {fileID: 1967806291001650, guid: 6d2e3ff93a24cdc4692bd749280c96c5, type: 3}
+  - {fileID: 1169192800073340, guid: 3453465b381fd294e8e0b2c3a9cb1950, type: 3}
+  - {fileID: 1403180029507646, guid: f923d13d00af49f4c888dd5f62f0835e, type: 3}
+  - {fileID: 1918399013857846, guid: e6f8143dfeec448449607c2dab33122b, type: 3}
+  - {fileID: 1711606201547466, guid: 542b24be0fbb7404398c770175ca589d, type: 3}
+  - {fileID: 1654536422366046, guid: e3ab0b0c66c14454b893cffcb67dcc33, type: 3}
+  - {fileID: 1429580138241874, guid: 7a3ef98fe4aee4047a8c214d0c33f19b, type: 3}
+  - {fileID: 1141628610405278, guid: eb822c0479f72e64ab2bd00f697c795b, type: 3}
+  vehiclesMin: 1
+  vehiclesMax: 4
+  vehicleSpawnLocations:
+  - {x: -2.5, y: 0, z: 0}
+  - {x: -2.5, y: 0, z: 6}
+  - {x: -2.5, y: 0, z: 15}
+  - {x: 4.74, y: 0, z: 17.44}
+  - {x: 15.6, y: 0, z: 16.6}
+  - {x: 1.9, y: 0, z: 10.37}
+  - {x: 9.76, y: 0, z: 13.78}
 --- !u!1001 &1517366733108094431
 PrefabInstance:
   m_ObjectHideFlags: 0

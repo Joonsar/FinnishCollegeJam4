@@ -6,29 +6,26 @@ public class TileManager : MonoBehaviour
 {
     public List<Vector3> plots;
 
-    [Header("Walls")]
-    public bool walled;
-    public GameObject wall;
-    public Vector3 wallDir;
+    [Header("VehicleSpawns")]
+    public List<GameObject> vehicles;
+    public int vehiclesMin = 1;
+    public int vehiclesMax = 4;
+    public List<Vector3> vehicleSpawnLocations;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        SpawnVehicles();
     }
 
-    void BuildWall()
+    void SpawnVehicles ()
     {
-        for(int i = 0; i < 5; i++)
-        {
-            GameObject spawned_wall = Instantiate(wall, transform.position + wallDir * i, transform.rotation);
+        int vehicleCount = vehiclesMin + (int)(Random.value * (vehiclesMax - vehiclesMin));
+        for(int i = 0; i < vehicleCount; i++) {
+            int location = (int)(Random.value * vehicleSpawnLocations.Count);
+            GameObject vehicle = Instantiate(vehicles[(int)(Random.value * vehicles.Count)], transform.position + vehicleSpawnLocations[location], Quaternion.Euler(Vector3.up * Random.value * 360));
+            vehicleSpawnLocations.RemoveAt(location);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnDrawGizmosSelected()
@@ -37,6 +34,11 @@ public class TileManager : MonoBehaviour
         {
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(transform.position + plot, 1f);
+        }
+        foreach(Vector3 loc in  vehicleSpawnLocations)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawCube(transform.position + loc, Vector3.one);
         }
     }
 }
