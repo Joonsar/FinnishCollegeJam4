@@ -9,6 +9,8 @@ public class UIController : MonoBehaviour
 {
     public Slider levelSlider;
     public TMP_Text levelText;
+
+    public Slider playerHealthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +37,10 @@ public class UIController : MonoBehaviour
     public void SetLevelSlider(float v)
     {
         levelSlider.value = v;
+    }
+
+    public void ChangePlayerHealthbarValue(int amount)
+    {
+        playerHealthBar.value -= (float)amount / 100;
     }
 }
