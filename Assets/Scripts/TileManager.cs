@@ -35,6 +35,7 @@ public class TileManager : MonoBehaviour
         }
     }
 
+    //Spawn Pickups
     void SpawnPickups()
     {
         int pickupCount = pickupsMin + (int)(Random.value * (pickupsMax - pickupsMin));
