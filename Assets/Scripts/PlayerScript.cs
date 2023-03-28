@@ -121,4 +121,9 @@ public class PlayerScript : MonoBehaviour
 
         }
     }
+
+    public void TestEvent()
+    {
+        Debug.Log("test");
+    }
 }
