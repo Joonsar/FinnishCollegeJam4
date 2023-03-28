@@ -5,16 +5,19 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 15f;
     [SerializeField] float turnSpeed = 5f;
-
+    public GameObject projectilePrefab;
+    public Transform projectileSpawnPoint;
 
     private ParticleSystem pb;
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
+    bool isShooting = false; // boolean flag to check if already shooting a projectile
 
     private Animator animator;
 
@@ -79,8 +82,35 @@ public class EnemyAI : MonoBehaviour
     {
         animator.SetBool("IsShooting", true);
         pb.Play();
-        //  GetComponent<Animator>().SetBool("attack", true);
-        
+
+        if (!isShooting) // check if not already shooting a projectile
+        {
+            isShooting = true;
+            
+            // Instantiate the projectile prefab at the projectile spawn point after 3 seconds
+            Invoke("ShootProjectile", 0.73f);
+        }
+
+    }
+    private void ShootProjectile()
+    {
+        // Instantiate the projectile prefab at the projectile spawn point
+        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+
+        // Get the Projectile component of the instantiated prefab
+        Projectile projectileComponent = projectile.GetComponent<Projectile>();
+
+        // Set the speed of the projectile
+        projectileComponent.speed = 40f;
+
+        // Set the direction of the projectile towards the player
+        Vector3 direction = (target.position - projectileSpawnPoint.position).normalized;
+        projectile.transform.rotation = Quaternion.LookRotation(direction);
+
+        // Destroy the projectile after a certain amount of time to prevent cluttering
+        Destroy(projectile, 4f);
+
+        isShooting = false; // set the flag to false so another projectile can be shot
     }
 
     private void FaceTarget()
