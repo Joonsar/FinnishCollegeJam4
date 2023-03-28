@@ -20,6 +20,8 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject uiController;
 
+    public Camera followCam;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,16 +38,20 @@ public class PlayerScript : MonoBehaviour
         var moveZ = Input.GetAxis("Vertical");
         movement.x = moveX;
         movement.z = moveZ;
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.y = transform.position.y;
+        Vector3 mousePosition = Input.mousePosition;
+        Vector3 mouseWorldPosition = followCam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, followCam.transform.position.y));
+        Vector3 lookDirection = mouseWorldPosition - transform.position;
+        //mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePosition.y = transform.position.y;
 
-        Vector3 lookDir = mousePosition - transform.position;
-        lookDir.y = 0;
+        //Vector3 lookDir = mousePosition - transform.position;
+        lookDirection.y = 0;
         //Debug.Log(lookDir);
-        Quaternion rotation = Quaternion.LookRotation(lookDir.normalized);
-        // transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotateSpeed * Time.fixedDeltaTime);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
-        UpdateAnimator();
+        Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, rotateSpeed * Time.fixedDeltaTime);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+        // transform.rotation = lookRotation;
+        //UpdateAnimator();
 
 
     }
@@ -55,19 +61,19 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        TakeDamage(1);
+        //AddExperience(0.01f);
 
 
 
     }
 
-    private void UpdateAnimator()
-    {
-        Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
-        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
-        float speed = localVelocity.z;
-        GetComponent<Animator>().SetFloat("forwardSpeed", speed);
-    }
+    /*  private void UpdateAnimator()
+      {
+          Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
+          Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+          float speed = localVelocity.z;
+          GetComponent<Animator>().SetFloat("forwardSpeed", speed);
+      }*/
 
     public void TakeDamage(int amount)
     {
