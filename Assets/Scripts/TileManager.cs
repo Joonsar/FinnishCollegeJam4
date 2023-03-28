@@ -7,6 +7,8 @@ public class TileManager : MonoBehaviour
     public Vector2 size = Vector2.one;
     public List<Vector3> plots;
 
+    public List<GameObject> buildings;
+ 
     [Header("VehicleSpawns")]
     public List<GameObject> vehicles;
     public int vehiclesMin = 1;
@@ -23,7 +25,7 @@ public class TileManager : MonoBehaviour
     void Start()
     {
         SpawnVehicles();
-        SpawnClutter();
+        SpawnBuildings();
     } 
 
     void SpawnVehicles ()
@@ -48,6 +50,18 @@ public class TileManager : MonoBehaviour
                 clutterLocations.RemoveAt(location);
                 clutter.transform.parent = transform;
             }    
+        }
+    }
+
+    void SpawnBuildings()
+    {
+        //Luodaan rakennukset
+        for (int i = 0; i < plots.Count; i++)
+        {
+            Quaternion rotation = Quaternion.Euler(Vector3.up * 90 * (int)(Random.value * 4));  //Rakennuksen rotaatio
+            int buildingID = (int)(Random.value * buildings.Count);
+            GameObject building = Instantiate(buildings[buildingID], transform.position + plots[i], rotation);
+            building.transform.parent = transform;
         }
     }
 

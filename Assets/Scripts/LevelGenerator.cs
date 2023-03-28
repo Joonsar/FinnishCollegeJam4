@@ -14,7 +14,6 @@ public class Tile
 
 public class LevelGenerator : MonoBehaviour
 {
-    public List<GameObject> buildings;
     public List<Tile> tiles;
     public GameObject wall;
     public int seed;
@@ -108,15 +107,6 @@ public class LevelGenerator : MonoBehaviour
         if(tm.size.x > 1 && tm.size.y > 1)
         {
             map[x + 1, z + 1] = map[x,z];
-        }
-
-        //Luodaan rakennukset
-        for(int i = 0; i < tm.plots.Count; i++)
-        {
-            Quaternion rotation = Quaternion.Euler(Vector3.up * 90 * (int)(Random.value * 4));  //Rakennuksen rotaatio
-            int buildingID = (int)(Random.value * buildings.Count);
-            GameObject building = Instantiate(buildings[buildingID], map[x, z].transform.position + tm.plots[i], rotation);
-            building.transform.parent = map[x, z].transform;
         }
     }
 }

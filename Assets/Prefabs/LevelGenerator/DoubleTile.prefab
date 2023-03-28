@@ -4552,15 +4552,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: {x: 2, y: 2}
   plots:
-  - {x: 0, y: 0, z: 0}
-  - {x: 15, y: 0, z: 0}
-  - {x: 30, y: 0, z: 0}
-  - {x: 0, y: 0, z: 15}
   - {x: 15, y: 0, z: 15}
-  - {x: 30, y: 0, z: 15}
-  - {x: 0, y: 0, z: 30}
-  - {x: 15, y: 0, z: 30}
-  - {x: 30, y: 0, z: 30}
+  buildings:
+  - {fileID: 3083655928831846922, guid: 8bf52feb1d2941049ad130df25cd418c, type: 3}
+  - {fileID: 3083655928831846922, guid: 78724e9aa0ab410448fc841235c9250a, type: 3}
   vehicles:
   - {fileID: 1254837790230190, guid: 34706970fd8733440a9c0f23206a856e, type: 3}
   - {fileID: 1344106213341860, guid: 9e3d7d4d81beecf44b4a9e5768cd8123, type: 3}

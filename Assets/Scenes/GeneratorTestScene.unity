@@ -1194,7 +1194,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &512814122
 GameObject:
@@ -3834,63 +3834,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527179020}
   m_Mesh: {fileID: 4300000, guid: b8258342a3df5b14cac241f34dfe4c2b, type: 3}
---- !u!1001 &1534344755
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1666700516740808582, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_Name
-      value: ParkPlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666700516740808583, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c9eebcc363ffea246b302654f430b970, type: 3}
 --- !u!1 &1550100642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4588,7 +4531,7 @@ Transform:
   - {fileID: 2102929413}
   - {fileID: 2067670813}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915425651
 GameObject:
@@ -5662,20 +5605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a3c02a80144ac4a83115dd5ae25793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildings:
-  - {fileID: 1244541953866960, guid: c037f4cd64354fd428bbf6b6007c235d, type: 3}
-  - {fileID: 1581616631694982, guid: 6053e238c2ee3e4499318f9353b3587f, type: 3}
-  - {fileID: 1117933066562142, guid: ff256aac7fa51c54db71970879315bcc, type: 3}
-  - {fileID: 1169408063739096, guid: ed95a1d27b321874cbe7017a50a4c292, type: 3}
-  - {fileID: 1998814181949766, guid: 05cce10c53c896f4495809af7a45bbe1, type: 3}
-  - {fileID: 1045421697045050, guid: 8a21e998caeaac347b4127cda7988cf3, type: 3}
-  - {fileID: 1943938442306626, guid: 686c3e339f3c07f438170547ac7aff50, type: 3}
-  - {fileID: 1391373417113574, guid: a279d9ca726ccb34a923266d9c5f9987, type: 3}
-  - {fileID: 1650256952041124, guid: 0fafb1450aa63ce469d1b0dde39971c1, type: 3}
-  - {fileID: 1784888299007024, guid: 3144fdf31c6d99242985622dcb79b6c6, type: 3}
-  - {fileID: 2189415535778926845, guid: 1ac848d5d69643c4f99af9d01c7f96a0, type: 3}
-  - {fileID: 1666700516740808582, guid: c9eebcc363ffea246b302654f430b970, type: 3}
-  - {fileID: 7100482624322013293, guid: fb606ebb0c26b7a4f8e748fa9c8dfe1e, type: 3}
   tiles:
   - name: Crossroad Tile
     tile: {fileID: 9155732071972059229, guid: a97ea9d8606172240a0355145859b8cc, type: 3}
@@ -5706,7 +5635,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236944556312344
 GameObject:

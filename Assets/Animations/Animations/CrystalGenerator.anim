@@ -51,16 +51,7 @@ AnimationClip:
     path: Gem
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves:
-  - curve:
-    - time: 0
-      value: {fileID: -6478536213147159724, guid: 1c5f102c09ab9824b8393eb21cf7260c, type: 3}
-    - time: 0.48333332
-      value: {fileID: 2100000, guid: 420fda5067010ad44ac599998b2870fa, type: 2}
-    attribute: m_Materials.Array.data[1]
-    path: Gem
-    classID: 23
-    script: {fileID: 0}
+  m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -75,16 +66,7 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2703081552
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 23
-      customType: 21
-      isPPtrCurve: 1
-    pptrCurveMapping:
-    - {fileID: -6478536213147159724, guid: 1c5f102c09ab9824b8393eb21cf7260c, type: 3}
-    - {fileID: 2100000, guid: 420fda5067010ad44ac599998b2870fa, type: 2}
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
