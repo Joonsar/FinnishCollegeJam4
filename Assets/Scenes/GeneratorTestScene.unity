@@ -6102,9 +6102,8 @@ MonoBehaviour:
   - name: Double Tile
     tile: {fileID: 9155732071972059229, guid: de753597d82af8947921092b8b1e9fc2, type: 3}
     weight: 1
-  wall: {fileID: 1870082208004184, guid: 8feb2335a05b64642a1d35a6a73cb21c, type: 3}
   seed: 0
-  size: 4
+  mapSize: 4
   tileSpawnList: []
 --- !u!4 &2121081713
 Transform:
