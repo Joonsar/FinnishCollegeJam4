@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using UnityEditor.UI;
 using UnityEngine;
 
 [System.Serializable]
-public class Tile   //Tile mahdollistaa weightin käytön helposti, jonka avulla määritellään kuinka todennäköisesti tile valitaan spawn lististä
+public class Tile   //Tile mahdollistaa weightin kï¿½ytï¿½n helposti, jonka avulla mï¿½ï¿½ritellï¿½ï¿½n kuinka todennï¿½kï¿½isesti tile valitaan spawn lististï¿½
 {
     public string name;
     public GameObject tile;
@@ -14,7 +13,7 @@ public class Tile   //Tile mahdollistaa weightin käytön helposti, jonka avulla m
 
 public class LevelGenerator : MonoBehaviour
 {
-    public List<Tile> tiles;    //Lista tileistä, joiden class on määritelty tämän scriptin alussa
+    public List<Tile> tiles;    //Lista tileistï¿½, joiden class on mï¿½ï¿½ritelty tï¿½mï¿½n scriptin alussa
     public int seed;
     public int mapSize = 4;
 
@@ -25,8 +24,9 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Jos seediä ei anneta, niin valitaan random seed
-        if(seed == 0) {
+        //Jos seediï¿½ ei anneta, niin valitaan random seed
+        if (seed == 0)
+        {
             seed = Random.Range(0, 9999);
         }
         print(seed);
@@ -39,12 +39,12 @@ public class LevelGenerator : MonoBehaviour
     void BuildLevel()
     {
         //Luodaan spawnlist tileille niille annetun painon perusteella    
-        foreach(Tile t in tiles)
+        foreach (Tile t in tiles)
         {
-            for(int i = 0; i < t.weight; i++)
+            for (int i = 0; i < t.weight; i++)
             {
                 tileSpawnList.Add(t.tile);
-            }           
+            }
         }
 
         //Luodaan array mapille
@@ -54,7 +54,7 @@ public class LevelGenerator : MonoBehaviour
             for (int x = 0; x < mapSize; x++)
             {
                 //Tarkistetaan tile
-                if (map[x,z] == null)
+                if (map[x, z] == null)
                 {
                     SpawnTile(x, z);
                 }
@@ -66,7 +66,7 @@ public class LevelGenerator : MonoBehaviour
     {
         //Arvotaan tilen index listasta
         int tileID = (int)(Random.value * tileSpawnList.Count);
-        //Tarkistetaan tilen viereiset tilet päällekkäisyyksiltä
+        //Tarkistetaan tilen viereiset tilet pï¿½ï¿½llekkï¿½isyyksiltï¿½
         if (tileSpawnList[tileID].GetComponent<TileManager>().size.x > 1)
         {
             if (map[x + 1, z] != null || x >= mapSize - 1)
@@ -80,9 +80,9 @@ public class LevelGenerator : MonoBehaviour
             if (map[x, z + 1] != null || z >= mapSize - 1)
             {
                 tileID = 0;
-            }           
+            }
         }
-        if(tileSpawnList[tileID].GetComponent<TileManager>().size == Vector2.one * 2 && z <= mapSize - 2 && x <= mapSize - 1)
+        if (tileSpawnList[tileID].GetComponent<TileManager>().size == Vector2.one * 2 && z <= mapSize - 2 && x <= mapSize - 1)
         {
             if (map[x + 1, z + 1] != null)
             {
@@ -104,9 +104,9 @@ public class LevelGenerator : MonoBehaviour
         {
             map[x, z + 1] = map[x, z];
         }
-        if(tm.size.x > 1 && tm.size.y > 1)
+        if (tm.size.x > 1 && tm.size.y > 1)
         {
-            map[x + 1, z + 1] = map[x,z];
+            map[x + 1, z + 1] = map[x, z];
         }
     }
 }
