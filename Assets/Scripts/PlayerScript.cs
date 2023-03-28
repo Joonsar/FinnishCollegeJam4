@@ -84,7 +84,8 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * movement);
-        //AddExperience(0.01f);
+        // health -= 1;
+        // uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(1);
     }
 
 

@@ -12,8 +12,8 @@ public class UIController : MonoBehaviour
     public TMP_Text levelText;
     public GameObject levelUpPanel;
     public TMP_Text playerHealthText;
-    public Slider playerHealthBar;
-    public List<Button> levelUpButtons= new List<Button>();
+    public Image playerHealthBar;
+    public List<Button> levelUpButtons = new List<Button>();
     public List<GameObject> skillCooldownButtons = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,7 @@ public class UIController : MonoBehaviour
 
     public void ChangePlayerHealthbarValue(int amount)
     {
-        playerHealthBar.value -= (float)amount / 100;
+        playerHealthBar.fillAmount -= (float)amount / 100;
     }
 
     public void ActivateLevelUpPanel()
@@ -53,10 +53,10 @@ public class UIController : MonoBehaviour
         levelUpPanel.SetActive(true);
     }
 
-    public void  DisableLevelUpPanel()
+    public void DisableLevelUpPanel()
     {
         levelUpPanel.SetActive(false);
-        
+
     }
 
     public void ChangePlayerHealthText(int health, int maxHealth)
@@ -67,7 +67,7 @@ public class UIController : MonoBehaviour
     public void ChangeSkillCooldown(int id, float cooldown)
     {
 
-        
+
         skillCooldownButtons[id].GetComponent<Image>().fillAmount = cooldown;
     }
 }
