@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2189415535778926842
 Transform:
@@ -29,13 +29,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2192539050366152521}
-  - {fileID: 2194329393513757496}
   - {fileID: 2192302055347435527}
   - {fileID: 2193820250718085119}
   - {fileID: 2193820251286434489}
   - {fileID: 2192510464607777984}
   - {fileID: 2192510465783852359}
   - {fileID: 2194342627518840965}
+  - {fileID: 2194329393513757496}
   - {fileID: 2194329393673579276}
   - {fileID: 2194329394695961957}
   - {fileID: 2194329394005408408}
@@ -74,7 +74,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2192510464607777984
 Transform:
@@ -89,7 +89,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2189415535778926842}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 37.27, z: 0}
 --- !u!33 &2167683860142255928
 MeshFilter:
@@ -172,7 +172,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2192510465783852359
 Transform:
@@ -187,7 +187,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2189415535778926842}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2167683859036698303
 MeshFilter:
@@ -269,7 +269,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2192363410909785605
 Transform:
@@ -347,14 +347,14 @@ GameObject:
   - component: {fileID: 2194329394160149498}
   - component: {fileID: 2168227916866004942}
   - component: {fileID: 2175541681138631652}
-  - component: {fileID: 2247566226375026088}
-  - component: {fileID: 2199806274078049216}
+  - component: {fileID: 4980339990411999963}
+  - component: {fileID: 292418834380846848}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394160149498
 Transform:
@@ -421,29 +421,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226375026088
-Animator:
-  serializedVersion: 5
+--- !u!208 &4980339990411999963
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545552774202566}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274078049216
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &292418834380846848
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -452,10 +447,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332263, y: 2.8218699, z: 2.123508}
+  m_Center: {x: -0.00025242567, y: 1.4109349, z: 0}
 --- !u!1 &2190545552843719158
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,14 +461,14 @@ GameObject:
   - component: {fileID: 2194329394241726154}
   - component: {fileID: 2168227916918743806}
   - component: {fileID: 2175541681212344020}
-  - component: {fileID: 2247566226318123160}
-  - component: {fileID: 2199806274025932528}
+  - component: {fileID: 1506490217757840127}
+  - component: {fileID: 7912888492610132333}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394241726154
 Transform:
@@ -541,29 +535,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226318123160
-Animator:
-  serializedVersion: 5
+--- !u!208 &1506490217757840127
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545552843719158}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274025932528
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &7912888492610132333
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -572,10 +561,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332263, y: 2.8218699, z: 2.123508}
+  m_Center: {x: -0.00025242567, y: 1.4109349, z: 0}
 --- !u!1 &2190545552882081906
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,14 +575,14 @@ GameObject:
   - component: {fileID: 2194329394203264846}
   - component: {fileID: 2168227916957090682}
   - component: {fileID: 2175541681181501264}
-  - component: {fileID: 2247566226346574108}
-  - component: {fileID: 2199806274054072180}
+  - component: {fileID: 313884557341593571}
+  - component: {fileID: 8962523485359023645}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394203264846
 Transform:
@@ -661,29 +649,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226346574108
-Animator:
-  serializedVersion: 5
+--- !u!208 &313884557341593571
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545552882081906}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274054072180
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &8962523485359023645
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -692,10 +675,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332265, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.00025242654, y: 1.4109349, z: 0}
 --- !u!1 &2190545552944782756
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,14 +689,14 @@ GameObject:
   - component: {fileID: 2194329394005408408}
   - component: {fileID: 2168227916752420524}
   - component: {fileID: 2175541680976812678}
-  - component: {fileID: 2247566226551307466}
-  - component: {fileID: 2199806274259376802}
+  - component: {fileID: 7386652314990487526}
+  - component: {fileID: 5656757617706270254}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394005408408
 Transform:
@@ -781,29 +763,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226551307466
-Animator:
-  serializedVersion: 5
+--- !u!208 &7386652314990487526
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545552944782756}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274259376802
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &5656757617706270254
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -812,10 +789,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332263, y: 2.8218699, z: 2.123508}
+  m_Center: {x: -0.00025242567, y: 1.4109349, z: 0}
 --- !u!1 &2190545553004252719
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,14 +803,14 @@ GameObject:
   - component: {fileID: 2194329394063304979}
   - component: {fileID: 2168227916828667175}
   - component: {fileID: 2175541681034184973}
-  - component: {fileID: 2247566226479247169}
-  - component: {fileID: 2199806274182531369}
+  - component: {fileID: 5491647029112230668}
+  - component: {fileID: 4236068941571795917}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394063304979
 Transform:
@@ -901,29 +877,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226479247169
-Animator:
-  serializedVersion: 5
+--- !u!208 &5491647029112230668
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545553004252719}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274182531369
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &4236068941571795917
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -932,10 +903,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332265, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.00025242654, y: 1.4109349, z: 0}
 --- !u!1 &2190545553250831077
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,14 +917,14 @@ GameObject:
   - component: {fileID: 2194329393833569753}
   - component: {fileID: 2168227916521597421}
   - component: {fileID: 2175541681349971399}
-  - component: {fileID: 2247566226715274123}
-  - component: {fileID: 2199806273885687267}
+  - component: {fileID: 354375462161987047}
+  - component: {fileID: 3107686793485278426}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329393833569753
 Transform:
@@ -1021,29 +991,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226715274123
-Animator:
-  serializedVersion: 5
+--- !u!208 &354375462161987047
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545553250831077}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806273885687267
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &3107686793485278426
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1052,10 +1017,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.00025242573, y: 1.4109349, z: 0}
 --- !u!1 &2190545553325202599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,14 +1031,14 @@ GameObject:
   - component: {fileID: 2194329393574493083}
   - component: {fileID: 2168227916377997231}
   - component: {fileID: 2175541680587578245}
-  - component: {fileID: 2247566225885773257}
-  - component: {fileID: 2199806273559501729}
+  - component: {fileID: 618824504213970091}
+  - component: {fileID: 3198594166519145910}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329393574493083
 Transform:
@@ -1141,29 +1105,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566225885773257
-Animator:
-  serializedVersion: 5
+--- !u!208 &618824504213970091
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545553325202599}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806273559501729
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &3198594166519145910
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1172,10 +1131,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.0002533794, y: 1.4109349, z: -0.00000023841858}
 --- !u!1 &2190545553361374256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,14 +1145,14 @@ GameObject:
   - component: {fileID: 2194329393673579276}
   - component: {fileID: 2168227916413120312}
   - component: {fileID: 2175541680685615890}
-  - component: {fileID: 2247566225787727198}
-  - component: {fileID: 2199806273457261366}
+  - component: {fileID: 7777489422747660245}
+  - component: {fileID: 3925096169858794583}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329393673579276
 Transform:
@@ -1261,29 +1219,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566225787727198
-Animator:
-  serializedVersion: 5
+--- !u!208 &7777489422747660245
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545553361374256}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806273457261366
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &3925096169858794583
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1292,10 +1245,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332263, y: 2.8218699, z: 2.123508}
+  m_Center: {x: -0.00025242567, y: 1.4109349, z: 0}
 --- !u!1 &2190545553537096708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,14 +1259,14 @@ GameObject:
   - component: {fileID: 2194329393513757496}
   - component: {fileID: 2168227916304547596}
   - component: {fileID: 2175541680526842662}
-  - component: {fileID: 2247566225963449706}
-  - component: {fileID: 2199806273632983810}
+  - component: {fileID: 1419579895191946797}
+  - component: {fileID: 1022515812673856725}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329393513757496
 Transform:
@@ -1329,7 +1281,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2189415535778926842}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2168227916304547596
 MeshFilter:
@@ -1381,29 +1333,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566225963449706
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2190545553537096708}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806273632983810
-MeshCollider:
+--- !u!65 &1419579895191946797
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1412,10 +1343,25 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 2.8218699, z: 2.123508}
+  m_Center: {x: -0.00025242567, y: 1.4109349, z: 0}
+--- !u!208 &1022515812673856725
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190545553537096708}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2190545553550547532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,14 +1373,14 @@ GameObject:
   - component: {fileID: 2194329393533762928}
   - component: {fileID: 2168227916284442948}
   - component: {fileID: 2175541680504642926}
-  - component: {fileID: 2247566225949702946}
-  - component: {fileID: 2199806273652989258}
+  - component: {fileID: 6109941578023759507}
+  - component: {fileID: 6719565394415005668}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329393533762928
 Transform:
@@ -1501,29 +1447,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566225949702946
-Animator:
-  serializedVersion: 5
+--- !u!208 &6109941578023759507
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545553550547532}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806273652989258
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &6719565394415005668
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1532,10 +1473,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332265, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.00025242654, y: 1.4109349, z: 0}
 --- !u!1 &2190545553669732966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,14 +1487,14 @@ GameObject:
   - component: {fileID: 2194329393382137178}
   - component: {fileID: 2168227916167682414}
   - component: {fileID: 2175541680931061060}
-  - component: {fileID: 2247566226096069384}
-  - component: {fileID: 2199806273232944480}
+  - component: {fileID: 3326647286112994884}
+  - component: {fileID: 2295329367742857601}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329393382137178
 Transform:
@@ -1621,29 +1561,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226096069384
-Animator:
-  serializedVersion: 5
+--- !u!208 &3326647286112994884
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545553669732966}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806273232944480
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &2295329367742857601
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1652,10 +1587,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.00025147205, y: 1.4109349, z: 0}
 --- !u!1 &2190545553867924078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,14 +1601,14 @@ GameObject:
   - component: {fileID: 2194329395197232466}
   - component: {fileID: 2168227915829002598}
   - component: {fileID: 2175541680053413196}
-  - component: {fileID: 2247566227508511488}
-  - component: {fileID: 2199806275182257512}
+  - component: {fileID: 2485531482887653729}
+  - component: {fileID: 2977604228001284290}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329395197232466
 Transform:
@@ -1741,29 +1675,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566227508511488
-Animator:
-  serializedVersion: 5
+--- !u!208 &2485531482887653729
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545553867924078}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806275182257512
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &2977604228001284290
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1772,10 +1701,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.00025242573, y: 1.4109349, z: 0}
 --- !u!1 &2190545554150386021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,14 +1715,14 @@ GameObject:
   - component: {fileID: 2194329394930503257}
   - component: {fileID: 2168227915558865517}
   - component: {fileID: 2175541680299175495}
-  - component: {fileID: 2247566227749029899}
-  - component: {fileID: 2199806274915528291}
+  - component: {fileID: 1039008891795291016}
+  - component: {fileID: 4843512913386493522}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394930503257
 Transform:
@@ -1861,29 +1789,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566227749029899
-Animator:
-  serializedVersion: 5
+--- !u!208 &1039008891795291016
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545554150386021}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274915528291
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &4843512913386493522
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1892,10 +1815,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332265, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.00025218813, y: 1.4109349, z: 0}
 --- !u!1 &2190545554258293997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,14 +1829,14 @@ GameObject:
   - component: {fileID: 2194329394839180241}
   - component: {fileID: 2168227915381692389}
   - component: {fileID: 2175541680207852495}
-  - component: {fileID: 2247566227859101059}
-  - component: {fileID: 2199806275025531883}
+  - component: {fileID: 4482911819915058597}
+  - component: {fileID: 838352127864362758}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394839180241
 Transform:
@@ -1981,29 +1903,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566227859101059
-Animator:
-  serializedVersion: 5
+--- !u!208 &4482911819915058597
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545554258293997}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806275025531883
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &838352127864362758
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2012,10 +1929,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332265, y: 2.8218699, z: 2.1235085}
+  m_Center: {x: -0.00025218813, y: 1.4109349, z: -0.00000023841858}
 --- !u!1 &2190545554385853017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,14 +1943,14 @@ GameObject:
   - component: {fileID: 2194329394695961957}
   - component: {fileID: 2168227915256559953}
   - component: {fileID: 2175541679526960507}
-  - component: {fileID: 2247566226910772023}
-  - component: {fileID: 2199806274613861727}
+  - component: {fileID: 6412545885388178071}
+  - component: {fileID: 7056952463202107239}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394695961957
 Transform:
@@ -2101,29 +2017,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226910772023
-Animator:
-  serializedVersion: 5
+--- !u!208 &6412545885388178071
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545554385853017}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274613861727
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &7056952463202107239
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2132,10 +2043,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332263, y: 2.8218699, z: 2.123508}
+  m_Center: {x: -0.00025242567, y: 1.4109349, z: 0}
 --- !u!1 &2190545554587204445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,14 +2057,14 @@ GameObject:
   - component: {fileID: 2194329394628861025}
   - component: {fileID: 2168227915189327957}
   - component: {fileID: 2175541679459875967}
-  - component: {fileID: 2247566226977954355}
-  - component: {fileID: 2199806274680994907}
+  - component: {fileID: 7392002188988567024}
+  - component: {fileID: 2600615438023625684}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394628861025
 Transform:
@@ -2221,29 +2131,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566226977954355
-Animator:
-  serializedVersion: 5
+--- !u!208 &7392002188988567024
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545554587204445}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274680994907
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &2600615438023625684
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2252,10 +2157,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332263, y: 2.8218699, z: 2.123508}
+  m_Center: {x: -0.00025242567, y: 1.4109349, z: 0}
 --- !u!1 &2190545554756177800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,14 +2171,14 @@ GameObject:
   - component: {fileID: 2194329394476722356}
   - component: {fileID: 2168227915073105024}
   - component: {fileID: 2175541679836465322}
-  - component: {fileID: 2247566227156840166}
-  - component: {fileID: 2199806274328037518}
+  - component: {fileID: 2693459922332474066}
+  - component: {fileID: 2827536837964550485}
   m_Layer: 0
   m_Name: SM_Prop_Fence_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194329394476722356
 Transform:
@@ -2341,29 +2245,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2247566227156840166
-Animator:
-  serializedVersion: 5
+--- !u!208 &2693459922332474066
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190545554756177800}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6064be090550b694eb8c7d898273d5ae, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!64 &2199806274328037518
-MeshCollider:
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 1.411, z: 1.062}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.411, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &2827536837964550485
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2372,10 +2271,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43858754242297936, guid: 8b52cbe339d10f946b45cede5bf1074c, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 1.0332263, y: 2.8218699, z: 2.123508}
+  m_Center: {x: -0.00025242567, y: 1.4109349, z: 0}
 --- !u!1 &2190797267222389049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,7 +2291,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2193820250718085119
 Transform:
@@ -2408,7 +2306,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2189415535778926842}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -9.32, z: 0}
 --- !u!33 &2167636734651392945
 MeshFilter:
@@ -2491,7 +2389,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2193820251286434489
 Transform:
@@ -2506,7 +2404,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2189415535778926842}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 144.2, z: 0}
 --- !u!33 &2167636734083043063
 MeshFilter:
@@ -2589,7 +2487,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2194342627518840965
 Transform:
@@ -2605,7 +2503,7 @@ Transform:
   m_Children:
   - {fileID: 2192363410909785605}
   m_Father: {fileID: 2189415535778926842}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -132.15, z: 0}
 --- !u!33 &2168224314303330475
 MeshFilter:
@@ -2688,7 +2586,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2192302055347435527
 Transform:
@@ -2703,7 +2601,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2189415535778926842}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -134.13, z: 0}
 --- !u!33 &2167413397778766061
 MeshFilter:
@@ -2787,7 +2685,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2192539050366152521
 Transform:
@@ -2893,6 +2791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_WoodenPath_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1133998300418894, guid: 284c9b45742e87d4fa48a08a2ba995be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4211756829766954, guid: 284c9b45742e87d4fa48a08a2ba995be, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -2954,6 +2856,10 @@ PrefabInstance:
     - target: {fileID: 1029199709335636, guid: 9c7e8190761130140ad6d4d31e4fe3e2, type: 3}
       propertyPath: m_Name
       value: SM_Prop_RubbishPile_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029199709335636, guid: 9c7e8190761130140ad6d4d31e4fe3e2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4653822112961022, guid: 9c7e8190761130140ad6d4d31e4fe3e2, type: 3}
       propertyPath: m_RootOrder
