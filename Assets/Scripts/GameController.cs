@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
 
 
 
+
+
     public GameObject enemyPrefab;
     void Start()
 
@@ -41,5 +43,32 @@ public class GameController : MonoBehaviour
 
     }
 
-    
+    public void InvokeSkill(Skill skill)
+    {
+        Debug.Log(skill.Name);
+        Debug.Log(skill.Ps.name);
+        if (skill.Ps != null)
+        {
+            Debug.Log("Ei oo null");
+        }
+        if (skill.Name == "Chain Lightning")
+        {
+            ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.identity) as ParticleSystem;
+            Destroy(part.gameObject, 5);
+
+
+        }
+
+        if (skill.Name == "Lazer Riffle")
+        {
+            ParticleSystem part = Instantiate(skill.Ps, player.transform.position, Quaternion.identity) as ParticleSystem;
+            Destroy(part.gameObject, 2);
+
+
+        }
+
+
+    }
+
+
 }

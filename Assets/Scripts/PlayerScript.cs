@@ -15,6 +15,10 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody rb;
     private Vector3 movement;
 
+    public ParticleSystem chainLightningPs;
+
+    public ParticleSystem LazerRifflePs;
+
     private Vector3 mousePosition;
     private List<Skill> skills;
     private Animator animator;
@@ -23,23 +27,33 @@ public class PlayerScript : MonoBehaviour
 
     public Camera followCam;
 
+    private GameObject gc;
+
+    private int skillIndex = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        gc = GameObject.FindGameObjectWithTag("GameController");
         rb = GetComponent<Rigidbody>();
         skills = new List<Skill>();
         animator = GetComponent<Animator>();
-        for(int i = 0; i < 5; i++)
-        {
-            skills.Add(new Skill(i, "testi", 10, Random.Range(2f,20f)));
-        }
+
+
+        skills.Add(new Skill(skillIndex, "Chain Lightning", 10, Random.Range(2f, 20f), chainLightningPs, gc));
+        skillIndex++;
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), LazerRifflePs, gc));
+        skillIndex++;
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), LazerRifflePs, gc));
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach(Skill sk in skills)
+        foreach (Skill sk in skills)
         {
             sk.UpdateSkill();
         }
@@ -47,20 +61,20 @@ public class PlayerScript : MonoBehaviour
         var moveZ = Input.GetAxis("Vertical");
         movement.x = moveX;
         movement.z = moveZ;
-      //  Vector3 mousePosition = Input.mousePosition;
-      //  Vector3 mouseWorldPosition = followCam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, followCam.transform.position.y));
-      //  Vector3 lookDirection = mouseWorldPosition - transform.position;
+        //  Vector3 mousePosition = Input.mousePosition;
+        //  Vector3 mouseWorldPosition = followCam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, followCam.transform.position.y));
+        //  Vector3 lookDirection = mouseWorldPosition - transform.position;
         //mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mousePosition.y = transform.position.y;
 
         //Vector3 lookDir = mousePosition - transform.position;
-      //  lookDirection.y = 0;
+        //  lookDirection.y = 0;
         //Debug.Log(lookDir);
-      //  Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
-      //  transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, rotateSpeed * Time.fixedDeltaTime);
+        //  Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
+        //  transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, rotateSpeed * Time.fixedDeltaTime);
         //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
         // transform.rotation = lookRotation;
-        
+
 
 
     }
@@ -73,7 +87,7 @@ public class PlayerScript : MonoBehaviour
         //AddExperience(0.01f);
     }
 
-  
+
 
     public void TakeDamage(int amount)
     {
@@ -132,9 +146,9 @@ public class PlayerScript : MonoBehaviour
     {
         speed += amount;
         Resume();
-        
+
     }
-    
+
     public void IncreaseMaxHealth(int amount)
     {
         Debug.Log("testi");
