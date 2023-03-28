@@ -63,7 +63,17 @@ public class GameController : MonoBehaviour
 
         if (skill.Name == "Lazer Riffle")
         {
-            ParticleSystem part = Instantiate(skill.Ps, player.transform.position, Quaternion.identity) as ParticleSystem;
+            Vector3 mousePosition = Input.mousePosition;
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, Camera.main.transform.position.y));
+            Vector3 lookDirection = mouseWorldPosition - player.transform.position;
+            //mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //mousePosition.y = transform.position.y;
+
+            //Vector3 lookDir = mousePosition - transform.position;
+            lookDirection.y = 0;
+            //Debug.Log(lookDir);
+            Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
+            ParticleSystem part = Instantiate(skill.Ps, player.transform.position, lookRotation) as ParticleSystem;
             Destroy(part.gameObject, 2);
 
 
