@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
 
     private GameObject player;
 
+    public List<GameObject> enemyPrefabs;
+
     public Terrain terrain;
 
 
@@ -32,7 +34,7 @@ public class GameController : MonoBehaviour
             bounds.max.y,
             Random.Range(bounds.min.z, bounds.max.z)
     );
-            GameObject go = Instantiate(enemyPrefab, randomPoint, Quaternion.identity) as GameObject;
+            GameObject go = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], randomPoint, Quaternion.identity) as GameObject;
             enemies.Add(go);
         }
     }
