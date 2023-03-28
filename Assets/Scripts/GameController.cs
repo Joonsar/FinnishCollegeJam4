@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
 
         if (skill.Ps != null)
         {
-            Debug.Log("Ei oo null");
+
         }
         if (skill.Name == "Chain Lightning")
         {
