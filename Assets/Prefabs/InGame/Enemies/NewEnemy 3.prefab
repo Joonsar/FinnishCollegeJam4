@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1695780183396033517}
   - component: {fileID: 865473222149128586}
   - component: {fileID: 1248028325}
+  - component: {fileID: 948889688116594361}
   m_Layer: 0
   m_Name: NewEnemy 3
   m_TagString: Enemy
@@ -4868,6 +4869,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
+  explosionPrefab: {fileID: 760985270207710547, guid: c0b10ee5a21c2c645805f64e38f99ece, type: 3}
+--- !u!136 &948889688116594361
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659918323858617799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.3905807
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.8111918, z: 0}
 --- !u!1001 &4158776712542126952
 PrefabInstance:
   m_ObjectHideFlags: 0
