@@ -9,6 +9,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float chaseRange = 15f;
     [SerializeField] float turnSpeed = 5f;
 
+
+    private ParticleSystem pb;
+
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
@@ -20,6 +23,7 @@ public class EnemyAI : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
+        pb = GetComponent<ParticleSystem>();
     }
 
 
@@ -66,7 +70,7 @@ public class EnemyAI : MonoBehaviour
     private void ChaseTarget()
     {
         animator.SetBool("IsShooting", false);
-        
+        pb.Stop();
         navMeshAgent.SetDestination(target.position);
 
     }
@@ -74,8 +78,9 @@ public class EnemyAI : MonoBehaviour
     private void AttackTarget()
     {
         animator.SetBool("IsShooting", true);
+        pb.Play();
         //  GetComponent<Animator>().SetBool("attack", true);
-        Debug.Log(name + " has seeked and is destroying " + target.name);
+        
     }
 
     private void FaceTarget()
