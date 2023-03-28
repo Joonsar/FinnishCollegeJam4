@@ -71,6 +71,7 @@ public class PlayerScript : MonoBehaviour
     {
         health -= amount;
         uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(amount);
+        uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
         CheckDeath();
     }
 
@@ -96,6 +97,8 @@ public class PlayerScript : MonoBehaviour
             exp = 0f;
             uiController.GetComponent<UIController>().ChangeLevelText("Level " + level);
             uiController.GetComponent<UIController>().SetLevelSlider(0f);
+            uiController.GetComponent<UIController>().ActivateLevelUpPanel();
+            Time.timeScale = 0;
         }
 
 
@@ -115,5 +118,27 @@ public class PlayerScript : MonoBehaviour
     public void TestEvent()
     {
         Debug.Log("test");
+    }
+
+    public void IncreaseMoveSpeed(float amount)
+    {
+        speed += amount;
+        Resume();
+        
+    }
+    
+    public void IncreaseMaxHealth(int amount)
+    {
+        Debug.Log("testi");
+        maxHealth += amount;
+        uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
+        Resume();
+
+    }
+
+    private void Resume()
+    {
+        uiController.GetComponent<UIController>().DisableLevelUpPanel();
+        Time.timeScale = 1f;
     }
 }
