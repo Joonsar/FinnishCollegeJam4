@@ -157,7 +157,7 @@ MonoBehaviour:
   target: {fileID: 0}
   chaseRange: 33.26
   turnSpeed: 4.85
-  projectilePrefab: {fileID: 2719152666404991357, guid: d458d79ea98918341b19028b5719ba1d, type: 3}
+  projectilePrefab: {fileID: 5798486348311094156, guid: 3988a5c70ace28e4892fe8a11f7cefd1, type: 3}
   projectileSpawnPoint: {fileID: 4804487361152237004}
 --- !u!198 &1695780183396033517
 ParticleSystem:

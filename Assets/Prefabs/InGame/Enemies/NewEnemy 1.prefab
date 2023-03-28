@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 1659918323858617799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 32377061858673452}
@@ -109,7 +109,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.35
-  m_Speed: 1.2
+  m_Speed: 5
   m_Acceleration: 47
   avoidancePriority: 50
   m_AngularSpeed: 28.7
@@ -157,7 +157,7 @@ MonoBehaviour:
   target: {fileID: 0}
   chaseRange: 33.26
   turnSpeed: 4.85
-  projectilePrefab: {fileID: 2719152666404991357, guid: d458d79ea98918341b19028b5719ba1d, type: 3}
+  projectilePrefab: {fileID: 5798486348311094156, guid: ba5a2300539756741ad027ec9a627647, type: 3}
   projectileSpawnPoint: {fileID: 7858153912102908789}
 --- !u!198 &1695780183396033517
 ParticleSystem:

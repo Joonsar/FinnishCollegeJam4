@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ed8ee3d298f29ae4b9819319bbf2a62d, type: 2}
 --- !u!1 &15863728
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +886,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec551efb37b6744790f1571cc60d064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 0
+  maxEnemies: 20
+  enemyPrefabs:
+  - {fileID: 1659918323858617799, guid: e4f52d763e00c3f4e96d40d3f27d611f, type: 3}
+  - {fileID: 1659918323858617799, guid: 7a4ea8b20c737774d8f4994339653e69, type: 3}
+  - {fileID: 1659918323858617799, guid: 504697cb62a2b8244a2f6a7e35d4caa2, type: 3}
+  - {fileID: 1659918323858617799, guid: ce5930561f735144cb6ee052f32e289d, type: 3}
   terrain: {fileID: 581414567}
   enemyPrefab: {fileID: 6052199533319089720, guid: 2572e0bc6de6fec4c97afe008b89b62a, type: 3}
 --- !u!4 &278105617
@@ -1266,7 +1271,7 @@ PrefabInstance:
       objectReference: {fileID: 198357083801700994, guid: 2c51ed4e970740543bbbefd591f8cb2f, type: 3}
     - target: {fileID: 8101633944439885049, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: speed
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8101633944439885049, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: followCam
@@ -1802,7 +1807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581414565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.5, y: -0.17, z: -35.1}
+  m_LocalPosition: {x: -13, y: -0.17, z: -14.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
