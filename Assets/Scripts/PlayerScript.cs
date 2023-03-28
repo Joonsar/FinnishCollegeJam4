@@ -36,6 +36,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         gc = GameObject.FindGameObjectWithTag("GameController");
+
         rb = GetComponent<Rigidbody>();
         skills = new List<Skill>();
         animator = GetComponent<Animator>();
