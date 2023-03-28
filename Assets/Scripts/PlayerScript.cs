@@ -30,11 +30,19 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         skills = new List<Skill>();
         animator = GetComponent<Animator>();
+        for(int i = 0; i < 5; i++)
+        {
+            skills.Add(new Skill(i, "testi", 10, Random.Range(2f,20f)));
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        foreach(Skill sk in skills)
+        {
+            sk.UpdateSkill();
+        }
         var moveX = Input.GetAxis("Horizontal");
         var moveZ = Input.GetAxis("Vertical");
         movement.x = moveX;

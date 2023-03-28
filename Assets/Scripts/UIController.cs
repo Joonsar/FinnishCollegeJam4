@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     public TMP_Text playerHealthText;
     public Slider playerHealthBar;
     public List<Button> levelUpButtons= new List<Button>();
+    public List<GameObject> skillCooldownButtons = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -62,5 +63,11 @@ public class UIController : MonoBehaviour
     {
         playerHealthText.text = health + "/" + maxHealth;
     }
-    
+
+    public void ChangeSkillCooldown(int id, float cooldown)
+    {
+
+        
+        skillCooldownButtons[id].GetComponent<Image>().fillAmount = cooldown;
+    }
 }
