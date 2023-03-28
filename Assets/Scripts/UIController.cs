@@ -5,12 +5,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class UIController : MonoBehaviour
 {
     public Slider levelSlider;
     public TMP_Text levelText;
-
+    public GameObject levelUpPanel;
+    public TMP_Text playerHealthText;
     public Slider playerHealthBar;
+    public List<Button> levelUpButtons= new List<Button>();
     // Start is called before the first frame update
     void Start()
     {
@@ -43,4 +46,21 @@ public class UIController : MonoBehaviour
     {
         playerHealthBar.value -= (float)amount / 100;
     }
+
+    public void ActivateLevelUpPanel()
+    {
+        levelUpPanel.SetActive(true);
+    }
+
+    public void  DisableLevelUpPanel()
+    {
+        levelUpPanel.SetActive(false);
+        
+    }
+
+    public void ChangePlayerHealthText(int health, int maxHealth)
+    {
+        playerHealthText.text = health + "/" + maxHealth;
+    }
+    
 }
