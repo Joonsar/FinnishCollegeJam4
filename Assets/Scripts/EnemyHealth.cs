@@ -18,8 +18,9 @@ public class EnemyHealth : MonoBehaviour
     {
         BroadcastMessage("OnDamageTaken");
         hitPoints -= damage;
-        if (hitPoints <= 0)
+        if (hitPoints <= 10)
         {
+            Debug.Log("Enemy took damage");
             player.GetComponent<PlayerScript>().AddExperience(0.1f);
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
