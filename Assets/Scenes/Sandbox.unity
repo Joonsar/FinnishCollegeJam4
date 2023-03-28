@@ -11436,7 +11436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.57
+      value: 0.084
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11478,6 +11478,10 @@ PrefabInstance:
       propertyPath: followCam
       value: 
       objectReference: {fileID: 1860788804}
+    - target: {fileID: 12469572072521150, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4883287991452113761, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -11502,13 +11506,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c36049cf21122ab4e948342a23090bbc, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 12469572072521137, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+    - {fileID: 8101633944439885036, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
---- !u!1 &8089173186223288650 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 12469572072521121, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
-  m_PrefabInstance: {fileID: 8089173186223288649}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8101633944237470020
 GameObject:
   m_ObjectHideFlags: 0
@@ -11603,6 +11604,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &8101633944439885032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 12469572072521121, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+  m_PrefabInstance: {fileID: 8089173186223288649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8101633944439885035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
@@ -11615,7 +11621,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8089173186223288650}
+  m_GameObject: {fileID: 8101633944439885032}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4cf8e35218228c74e87ae151b5dc4516, type: 3}
   m_Controller: {fileID: 9100000, guid: c36049cf21122ab4e948342a23090bbc, type: 2}
@@ -11629,3 +11635,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8101633944439885049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8101633944439885032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12e2b3d44264ac4c8176ddc138d93f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 150
