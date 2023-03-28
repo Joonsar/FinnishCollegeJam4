@@ -111,4 +111,9 @@ public class PlayerScript : MonoBehaviour
             //Destroy(coll.gameObject);
         }
     }
+
+    public void TestEvent()
+    {
+        Debug.Log("test");
+    }
 }

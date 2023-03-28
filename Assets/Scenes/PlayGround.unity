@@ -2760,6 +2760,7 @@ PrefabInstance:
     - {fileID: 114739187124406758, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
     - {fileID: 114472432562717340, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
     - {fileID: 11400000, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
+    - {fileID: 283400044, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
 --- !u!1001 &450770502
 PrefabInstance:
@@ -3663,7 +3664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rotateSpeed: 100
+  rotateSpeed: 200
   maxHealth: 100
   health: 100
   level: 1
@@ -3713,6 +3714,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &580907445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580907431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489a49de44065de488378055d57a43d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &601045126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4795,11 +4808,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3208522699527739397, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1700015
+      value: 6.65
       objectReference: {fileID: 0}
     - target: {fileID: 3208522699527739397, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.65118
+      value: 31.31
       objectReference: {fileID: 0}
     - target: {fileID: 3208522699527739397, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4832,6 +4845,42 @@ PrefabInstance:
     - target: {fileID: 3208522699527739399, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
       propertyPath: m_Name
       value: Follow Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8529269
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5219848
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0066681704
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0017840941
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 62.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 361.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694670392617240232, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.493
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
@@ -10990,7 +11039,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Level 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
