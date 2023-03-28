@@ -1280,6 +1280,14 @@ PrefabInstance:
       propertyPath: rotationSpeed
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 8101633944439885053, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8101633944439885053, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8147879911672732873, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_Controller
       value: 
@@ -5314,6 +5322,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932847460}
   m_Mesh: {fileID: 4300000, guid: de04fe5f5ea058c4196ccbcbac489ac3, type: 3}
+--- !u!1 &1992411331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 12469572072521121, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+  m_PrefabInstance: {fileID: 494931391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1992411339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992411331}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.5930004, z: 1}
+  m_Center: {x: 0, y: 0.7965002, z: 0}
 --- !u!1 &1997193263
 GameObject:
   m_ObjectHideFlags: 0
