@@ -924,6 +924,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1994116380}
+    - target: {fileID: 6126762293899787937, guid: ce5930561f735144cb6ee052f32e289d, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5798486348311094156, guid: fb7f449f2ec163b4980992e74b8f9e8d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce5930561f735144cb6ee052f32e289d, type: 3}
 --- !u!4 &210728173 stripped
@@ -3067,6 +3071,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1994116380}
+    - target: {fileID: 6126762293899787937, guid: 504697cb62a2b8244a2f6a7e35d4caa2, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5798486348311094156, guid: 3988a5c70ace28e4892fe8a11f7cefd1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 504697cb62a2b8244a2f6a7e35d4caa2, type: 3}
 --- !u!1 &1026001727
@@ -3577,6 +3585,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1994116380}
+    - target: {fileID: 6126762293899787937, guid: 8eb5f190daebf6846bf02748d7fcf12b, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5798486348311094156, guid: ba5a2300539756741ad027ec9a627647, type: 3}
     - target: {fileID: 7443239399790544010, guid: 8eb5f190daebf6846bf02748d7fcf12b, type: 3}
       propertyPath: m_Speed
       value: 5
@@ -4616,6 +4628,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1994116380}
+    - target: {fileID: 6126762293899787937, guid: e4f52d763e00c3f4e96d40d3f27d611f, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5798486348311094156, guid: 4084a228844affe46b56f9135c644f17, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4f52d763e00c3f4e96d40d3f27d611f, type: 3}
 --- !u!1 &1663911483
