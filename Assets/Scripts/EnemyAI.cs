@@ -13,11 +13,13 @@ public class EnemyAI : MonoBehaviour
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
 
+    private Animator animator;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
     }
 
 
@@ -45,26 +47,33 @@ public class EnemyAI : MonoBehaviour
         FaceTarget();
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
+            animator.SetBool("IsMoving", true);
             ChaseTarget();
         }
-
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
         if (distanceToTarget <= navMeshAgent.stoppingDistance)
         {
+            
             AttackTarget();
         }
+    
     }
 
 
     private void ChaseTarget()
     {
-        //   GetComponent<Animator>().SetBool("attack", false);
-        //  GetComponent<Animator>().SetTrigger("move");
+        animator.SetBool("IsShooting", false);
+        
         navMeshAgent.SetDestination(target.position);
 
     }
 
     private void AttackTarget()
     {
+        animator.SetBool("IsShooting", true);
         //  GetComponent<Animator>().SetBool("attack", true);
         Debug.Log(name + " has seeked and is destroying " + target.name);
     }
