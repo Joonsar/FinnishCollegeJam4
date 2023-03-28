@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 7443239399790544010}
   - component: {fileID: 1441668654667313267}
   - component: {fileID: 6126762293899787937}
-  - component: {fileID: 3178131214660440022}
-  - component: {fileID: 3675759741093301941}
   - component: {fileID: 1695780183396033517}
   - component: {fileID: 865473222149128586}
+  - component: {fileID: 773143269}
   m_Layer: 0
   m_Name: NewEnemy
   m_TagString: Enemy
@@ -155,34 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chaseRange: 33.26
+  chaseRange: 27.09
   turnSpeed: 4.85
---- !u!114 &3178131214660440022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659918323858617799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e23ef6914fb98c45abb84b0197629fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 40
---- !u!114 &3675759741093301941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659918323858617799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e09c495e6704578418f22ac6d11cbd16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 100
+  projectilePrefab: {fileID: 2719152666404991357, guid: d458d79ea98918341b19028b5719ba1d, type: 3}
+  projectileSpawnPoint: {fileID: 6388489459594237247}
 --- !u!198 &1695780183396033517
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4880,6 +4855,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &773143269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659918323858617799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09c495e6704578418f22ac6d11cbd16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
 --- !u!1 &5908750397680262292
 GameObject:
   m_ObjectHideFlags: 0
@@ -7417,6 +7405,7 @@ Transform:
   - {fileID: 5911565851384779552}
   - {fileID: 5914632902127182024}
   - {fileID: 5911596350768261752}
+  - {fileID: 6388489459594237247}
   m_Father: {fileID: 5911919514938009046}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9200,4 +9189,35 @@ Transform:
   - {fileID: 5914630597407434150}
   m_Father: {fileID: 5911556888943537756}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7298067629074486679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6388489459594237247}
+  m_Layer: 0
+  m_Name: ProjectileSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6388489459594237247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7298067629074486679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5914574713746083532}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

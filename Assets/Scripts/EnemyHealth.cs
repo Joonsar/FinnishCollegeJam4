@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float hitPoints = 100f;
+    [SerializeField] GameObject explosionPrefab;
     private GameObject player;
 
     private void Start()
@@ -20,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
         if (hitPoints <= 0)
         {
             player.GetComponent<PlayerScript>().AddExperience(0.1f);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
