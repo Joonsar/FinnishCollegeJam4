@@ -47,8 +47,7 @@ public class GameController : MonoBehaviour
 
     public void InvokeSkill(Skill skill)
     {
-        Debug.Log(skill.Name);
-        Debug.Log(skill.Ps.name);
+
         if (skill.Ps != null)
         {
             Debug.Log("Ei oo null");
