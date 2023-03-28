@@ -51,7 +51,7 @@ public class PlayerScript : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, rotateSpeed * Time.fixedDeltaTime);
         //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
         // transform.rotation = lookRotation;
-        //UpdateAnimator();
+        
 
 
     }
@@ -67,13 +67,7 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    /*  private void UpdateAnimator()
-      {
-          Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
-          Vector3 localVelocity = transform.InverseTransformDirection(velocity);
-          float speed = localVelocity.z;
-          GetComponent<Animator>().SetFloat("forwardSpeed", speed);
-      }*/
+  
 
     public void TakeDamage(int amount)
     {
