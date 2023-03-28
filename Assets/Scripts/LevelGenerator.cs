@@ -5,7 +5,7 @@ using UnityEditor.UI;
 using UnityEngine;
 
 [System.Serializable]
-public class Tile
+public class Tile   //Tile mahdollistaa weightin käytön helposti, jonka avulla määritellään kuinka todennäköisesti tile valitaan spawn lististä
 {
     public string name;
     public GameObject tile;
@@ -14,10 +14,9 @@ public class Tile
 
 public class LevelGenerator : MonoBehaviour
 {
-    public List<Tile> tiles;
-    public GameObject wall;
+    public List<Tile> tiles;    //Lista tileistä, joiden class on määritelty tämän scriptin alussa
     public int seed;
-    public int size = 10;
+    public int mapSize = 4;
 
     public List<GameObject> tileSpawnList = new List<GameObject>();
     GameObject[,] map;
@@ -39,7 +38,7 @@ public class LevelGenerator : MonoBehaviour
     //Rakentaa tason
     void BuildLevel()
     {
-        //Luodaan spawnlist tileille        
+        //Luodaan spawnlist tileille niille annetun painon perusteella    
         foreach(Tile t in tiles)
         {
             for(int i = 0; i < t.weight; i++)
@@ -49,10 +48,10 @@ public class LevelGenerator : MonoBehaviour
         }
 
         //Luodaan array mapille
-        map = new GameObject[size + 1, size + 1];
-        for (int z = 0; z < size; z++)
+        map = new GameObject[mapSize + 1, mapSize + 1];
+        for (int z = 0; z < mapSize; z++)
         {
-            for (int x = 0; x < size; x++)
+            for (int x = 0; x < mapSize; x++)
             {
                 //Tarkistetaan tile
                 if (map[x,z] == null)
@@ -68,21 +67,22 @@ public class LevelGenerator : MonoBehaviour
         //Arvotaan tilen index listasta
         int tileID = (int)(Random.value * tileSpawnList.Count);
         //Tarkistetaan tilen viereiset tilet päällekkäisyyksiltä
-        if (tileSpawnList[tileID].GetComponent<TileManager>().size.x > 1 && x < size)
+        if (tileSpawnList[tileID].GetComponent<TileManager>().size.x > 1)
         {
-            if(map[x + 1, z] != null)
+            if (map[x + 1, z] != null || x >= mapSize - 1)
             {
                 tileID = 0;
             }
         }
-        if (tileSpawnList[tileID].GetComponent<TileManager>().size.y > 1 && z < size)
+        if (tileSpawnList[tileID].GetComponent<TileManager>().size.y > 1 && z <= mapSize - 1)
         {
-            if (map[x, z + 1] != null)
+            print("Z");
+            if (map[x, z + 1] != null || z >= mapSize - 1)
             {
                 tileID = 0;
             }           
         }
-        if(tileSpawnList[tileID].GetComponent<TileManager>().size == Vector2.one * 2 && z < size && x < size)
+        if(tileSpawnList[tileID].GetComponent<TileManager>().size == Vector2.one * 2 && z <= mapSize - 2 && x <= mapSize - 1)
         {
             if (map[x + 1, z + 1] != null)
             {
