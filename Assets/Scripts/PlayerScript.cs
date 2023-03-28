@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
 
     private Vector3 mousePosition;
     private List<Skill> skills;
+    private Animator animator;
 
     public GameObject uiController;
 
@@ -28,7 +29,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         skills = new List<Skill>();
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -62,9 +63,6 @@ public class PlayerScript : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         //AddExperience(0.01f);
-
-
-
     }
 
   
@@ -111,8 +109,6 @@ public class PlayerScript : MonoBehaviour
             coll.gameObject.GetComponent<EnemyHealth>().TakeDamage((float)damage);
             Debug.Log(coll.gameObject.name + " took " + damage + " damage");
             //Destroy(coll.gameObject);
-
-
         }
     }
 }
