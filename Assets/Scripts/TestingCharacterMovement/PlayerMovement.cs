@@ -9,8 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public Camera followCam;
 
     private Animator animator;
+
+    private Rigidbody rb;
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
     }
 
@@ -38,15 +41,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (movementDirection != Vector3.zero)
         {
-            
-            animator.SetBool("IsMoving", true);
-           // Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
-           // transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            animator.SetBool("IsMoving", true);
+            // Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+
+            // transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
         else
         {
             animator.SetBool("IsMoving", false);
         }
+    }
+
+    void FixedUpdate()
+    {
+        // rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * movement);
+        //AddExperience(0.01f);
     }
 }
