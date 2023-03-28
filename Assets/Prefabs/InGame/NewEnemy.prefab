@@ -109,11 +109,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.35
-  m_Speed: 5.6
-  m_Acceleration: 8
+  m_Speed: 1.2
+  m_Acceleration: 47
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 28.7
+  m_StoppingDistance: 5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -131,7 +131,7 @@ Animator:
   m_GameObject: {fileID: 1659918323858617799}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f13349cc09b03d447a26b54d406aaa8e, type: 3}
-  m_Controller: {fileID: 9100000, guid: c36049cf21122ab4e948342a23090bbc, type: 2}
+  m_Controller: {fileID: 9100000, guid: 186e940c3dff3f94b93be36a4bc3a33f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   chaseRange: 33.26
-  turnSpeed: 5
+  turnSpeed: 4.85
 --- !u!114 &3178131214660440022
 MonoBehaviour:
   m_ObjectHideFlags: 0
