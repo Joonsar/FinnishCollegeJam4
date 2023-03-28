@@ -39,17 +39,17 @@ public class PlayerScript : MonoBehaviour
         var moveZ = Input.GetAxis("Vertical");
         movement.x = moveX;
         movement.z = moveZ;
-        Vector3 mousePosition = Input.mousePosition;
-        Vector3 mouseWorldPosition = followCam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, followCam.transform.position.y));
-        Vector3 lookDirection = mouseWorldPosition - transform.position;
+      //  Vector3 mousePosition = Input.mousePosition;
+      //  Vector3 mouseWorldPosition = followCam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, followCam.transform.position.y));
+      //  Vector3 lookDirection = mouseWorldPosition - transform.position;
         //mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mousePosition.y = transform.position.y;
 
         //Vector3 lookDir = mousePosition - transform.position;
-        lookDirection.y = 0;
+      //  lookDirection.y = 0;
         //Debug.Log(lookDir);
-        Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, rotateSpeed * Time.fixedDeltaTime);
+      //  Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
+      //  transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, rotateSpeed * Time.fixedDeltaTime);
         //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
         // transform.rotation = lookRotation;
         
@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * movement);
         //AddExperience(0.01f);
     }
 
