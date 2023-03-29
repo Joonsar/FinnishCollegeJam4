@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Collide
   - UiController
+  - EnemyHealthBar
   layers:
   - Default
   - TransparentFX
