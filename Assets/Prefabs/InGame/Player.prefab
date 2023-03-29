@@ -100,8 +100,6 @@ MonoBehaviour:
   level: 1
   exp: 0
   damage: 4
-  chainLightningPs: {fileID: 198357083801700994, guid: 845e1a0860516904388ded3a3ffbed08, type: 3}
-  LazerRifflePs: {fileID: 198972024003653092, guid: 7b01b05f6268bc747a684d70a49d195d, type: 3}
   uiController: {fileID: 0}
   followCam: {fileID: 0}
 --- !u!114 &12469572072521151

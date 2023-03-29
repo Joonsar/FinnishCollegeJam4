@@ -18,11 +18,10 @@ public class Skill
 
     public int Id { get; set; }
     public ParticleSystem Ps { get; set; }
-    public int Level { get; set; }
 
     public GameObject Gc { get; set; }
 
-    public Skill(int id, string name, int damage, float cooldown, int level, ParticleSystem ps, GameObject gc)
+    public Skill(int id, string name, int damage, float cooldown, ParticleSystem ps, GameObject gc)
     {
 
         Id = id;
@@ -33,7 +32,6 @@ public class Skill
         uiController = GameObject.FindGameObjectWithTag("UiController");
         Gc = gc;
         Ps = ps;
-        Level = level;
 
     }
 
