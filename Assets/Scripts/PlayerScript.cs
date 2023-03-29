@@ -42,11 +42,11 @@ public class PlayerScript : MonoBehaviour
         animator = GetComponent<Animator>();
 
 
-        skills.Add(new Skill(skillIndex, "Chain Lightning", 10, Random.Range(2f, 20f), chainLightningPs, gc));
+        skills.Add(new Skill(skillIndex, "Chain Lightning", 10, Random.Range(2f, 20f), 5, chainLightningPs, gc));
         skillIndex++;
-        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), LazerRifflePs, gc));
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), 5, LazerRifflePs, gc));
         skillIndex++;
-        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), LazerRifflePs, gc));
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), 5, LazerRifflePs, gc));
 
 
     }
