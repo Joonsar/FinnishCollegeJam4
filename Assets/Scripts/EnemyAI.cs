@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 15f;
     [SerializeField] float turnSpeed = 5f;
-    
+
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
 
@@ -64,10 +64,10 @@ public class EnemyAI : MonoBehaviour
         }
         if (distanceToTarget <= navMeshAgent.stoppingDistance)
         {
-            
+
             AttackTarget();
         }
-    
+
     }
 
 
@@ -87,7 +87,7 @@ public class EnemyAI : MonoBehaviour
         if (!isShooting) // check if not already shooting a projectile
         {
             isShooting = true;
-            
+
             // Instantiate the projectile prefab at the projectile spawn point after 3 seconds
             Invoke("ShootProjectile", 0.75f);
         }
@@ -102,14 +102,14 @@ public class EnemyAI : MonoBehaviour
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
 
         // Set the speed of the projectile
-        projectileComponent.speed = 25f;
+        projectileComponent.speed = 10f;
 
         // Set the direction of the projectile towards the player
-        Vector3 direction = (target.position - projectileSpawnPoint.position).normalized;
+        Vector3 direction = (target.position + new Vector3(0, 1f, 0) - projectileSpawnPoint.position).normalized;
         projectile.transform.rotation = Quaternion.LookRotation(direction);
 
         // Destroy the projectile after a certain amount of time to prevent cluttering
-        Destroy(projectile, 4f);
+        Destroy(projectile, 10f);
 
         isShooting = false; // set the flag to false so another projectile can be shot
     }
