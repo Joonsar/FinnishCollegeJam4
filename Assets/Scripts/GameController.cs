@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public int maxEnemies = 50;
+    public int maxEnemies = 10;
 
     public List<GameObject> enemies;
 
@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     public Transform navmesh;
 
     LevelGenerator generator;
-    public int spawnClock = 1;
+    public float spawnClock = 1;
 
 
     public GameObject enemyPrefab;
@@ -27,18 +27,7 @@ public class GameController : MonoBehaviour
         generator = GetComponent<LevelGenerator>();
 
         player = GameObject.FindGameObjectWithTag("Player");
-        /*
-        for (int i = 0; i < maxEnemies; i++)
-        {
-            Vector3 randomPoint = new Vector3(
-            Random.Range(bounds.min.x, bounds.max.x),
-            bounds.max.y,
-            Random.Range(bounds.min.z, bounds.max.z)
-            );
-            GameObject go = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], randomPoint, Quaternion.identity) as GameObject;
-            enemies.Add(go);
-        }
-        */
+
         InvokeRepeating("EnemySpawns", 0, spawnClock);
     }
 
@@ -50,6 +39,7 @@ public class GameController : MonoBehaviour
 
     public void EnemySpawns()
     {
+        maxEnemies = 10 + (int)((600 - GetComponent<Timer>().timeRemaining) * .1f);
         if(enemies.Count < maxEnemies)
         {
             //Valitaan tile, jonka spawn pointteja käytetään
