@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class PlayerScript : MonoBehaviour
     private int skillIndex = 0;
 
     private AudioController audioController;
+
+    public bool isAlive = true;
 
 
     // Start is called before the first frame update
@@ -86,14 +89,18 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * movement);
-        //AddExperience(0.01f);
+        if (isAlive)
+        {
+            rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * movement);
+            //AddExperience(0.01f);
+        }
     }
 
 
 
     public void TakeDamage(int amount)
     {
+
         health -= amount;
         uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(health, maxHealth);
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
@@ -110,7 +117,16 @@ public class PlayerScript : MonoBehaviour
 
     public void Die()
     {
-        //game over
+        isAlive = false;
+        StartCoroutine("WaitAfterDead");
+    }
+
+
+    IEnumerator WaitAfterDead()
+    {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("GameOver");
+
     }
 
     public void AddExperience(float amount)
