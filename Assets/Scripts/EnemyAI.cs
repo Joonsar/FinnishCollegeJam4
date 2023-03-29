@@ -88,7 +88,7 @@ public class EnemyAI : MonoBehaviour
             isShooting = true;
             
             // Instantiate the projectile prefab at the projectile spawn point after 3 seconds
-            Invoke("ShootProjectile", 0.73f);
+            Invoke("ShootProjectile", 0.75f);
         }
 
     }
@@ -101,7 +101,7 @@ public class EnemyAI : MonoBehaviour
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
 
         // Set the speed of the projectile
-        projectileComponent.speed = 40f;
+        projectileComponent.speed = 25f;
 
         // Set the direction of the projectile towards the player
         Vector3 direction = (target.position - projectileSpawnPoint.position).normalized;
