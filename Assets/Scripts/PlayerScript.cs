@@ -150,6 +150,24 @@ public class PlayerScript : MonoBehaviour
 
     }
 
+    public void LevelUp(int attribute)
+    {
+        switch (attribute)
+        {
+            case 0: //Movement speed
+                speed += 1;
+                Resume();
+                break;
+            case 1: //Cooldown speed
+                Resume();
+                break;
+            case 2: //Max Health
+                Resume();
+                maxHealth += 10;
+                break;
+        }
+    }
+
     public void IncreaseMaxHealth(int amount)
     {
         Debug.Log("testi");
