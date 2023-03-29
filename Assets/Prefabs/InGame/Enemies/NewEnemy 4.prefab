@@ -98,7 +98,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!195 &7443239399790544010
 NavMeshAgent:
@@ -5329,6 +5329,26 @@ PrefabInstance:
     - target: {fileID: 7310891580045391408, guid: 6909982d91f86a04e831a86fff27cd80, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0014
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310891580045391408, guid: 6909982d91f86a04e831a86fff27cd80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9895535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310891580045391408, guid: 6909982d91f86a04e831a86fff27cd80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000006332993
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310891580045391408, guid: 6909982d91f86a04e831a86fff27cd80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000027194616
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310891580045391408, guid: 6909982d91f86a04e831a86fff27cd80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.14416607
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310891580045391408, guid: 6909982d91f86a04e831a86fff27cd80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -16.578
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6909982d91f86a04e831a86fff27cd80, type: 3}
