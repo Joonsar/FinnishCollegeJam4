@@ -39,7 +39,7 @@ public class AudioController : MonoBehaviour
         {
             case (Audios.blackholesound):
                 audioSource.PlayOneShot(blackholeSoundPrefab);
-                Debug.Log("Blackhole Sound");
+
                 break;
             case (Audios.riffleSound):
                 audioSource.PlayOneShot(riffleSoundPrefab);
