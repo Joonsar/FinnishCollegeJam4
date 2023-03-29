@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3557069197773319420}
   - component: {fileID: 1637560800649664566}
   - component: {fileID: 4748043662676049766}
+  - component: {fileID: 1364349835651435837}
+  - component: {fileID: 7890209956634209849}
   m_Layer: 0
   m_Name: Machine01
   m_TagString: Untagged
@@ -112,6 +114,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!64 &1364349835651435837
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988879519584385507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8074750411987931458, guid: c6616aa6bacccfc4c988d06d0d98fa71, type: 3}
+--- !u!208 &7890209956634209849
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988879519584385507}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.015000001, y: 0.018000001, z: 0.012}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.018000001, z: 0.006}
+  m_TimeToStationary: 0.5
 --- !u!1 &2073519992116433373
 GameObject:
   m_ObjectHideFlags: 0
