@@ -1002,6 +1002,7 @@ GameObject:
   - component: {fileID: 278105617}
   - component: {fileID: 278105616}
   - component: {fileID: 278105618}
+  - component: {fileID: 278105619}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1075,6 +1076,20 @@ MonoBehaviour:
   seed: 0
   mapSize: 4
   tileSpawnList: []
+--- !u!114 &278105619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278105615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d0ca920b74f924e9586b187bad6ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 600
+  timerText: {fileID: 4299242363554711714}
 --- !u!1 &313002392
 GameObject:
   m_ObjectHideFlags: 0
@@ -10474,20 +10489,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4053263818192893132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8781612036793162561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34d0ca920b74f924e9586b187bad6ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 600
-  timerText: {fileID: 4299242363554711714}
 --- !u!4 &4107809766420907886
 Transform:
   m_ObjectHideFlags: 0
@@ -11297,7 +11298,6 @@ GameObject:
   - component: {fileID: 3416579674764737074}
   - component: {fileID: 7635651482520793236}
   - component: {fileID: 4299242363554711714}
-  - component: {fileID: 4053263818192893132}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
