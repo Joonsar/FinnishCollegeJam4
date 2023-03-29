@@ -42,20 +42,15 @@ public class PlayerMovement : MonoBehaviour
         if (movementDirection != Vector3.zero)
         {
 
-            animator.SetBool("IsMoving", true);
+            animator.SetBool("Run", true);
             // Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
             // transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
         else
         {
-            animator.SetBool("IsMoving", false);
+            animator.SetBool("Run", false);
         }
     }
-
-    void FixedUpdate()
-    {
-        // rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * movement);
-        //AddExperience(0.01f);
-    }
+  
 }
