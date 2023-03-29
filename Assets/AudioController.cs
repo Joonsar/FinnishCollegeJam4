@@ -7,11 +7,15 @@ public enum Audios
 {
     riffleSound,
     blackholesound,
+
+    flamethrowsound
 }
 public class AudioController : MonoBehaviour
 {
     public AudioClip riffleSoundPrefab;
     public AudioClip blackholeSoundPrefab;
+
+    public AudioClip flamethrowerSoundPrefab;
 
     private AudioSource audioSource;
 
@@ -32,13 +36,16 @@ public class AudioController : MonoBehaviour
         switch (a)
         {
             case (Audios.blackholesound):
-
-
                 audioSource.PlayOneShot(blackholeSoundPrefab);
                 Debug.Log("Blackhole Sound");
                 break;
             case (Audios.riffleSound):
                 audioSource.PlayOneShot(riffleSoundPrefab);
+                break;
+            case (Audios.flamethrowsound):
+                audioSource.PlayOneShot(flamethrowerSoundPrefab);
+                break;
+            default:
                 break;
         }
     }
