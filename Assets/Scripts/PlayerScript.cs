@@ -44,7 +44,7 @@ public class PlayerScript : MonoBehaviour
         animator = GetComponent<Animator>();
 
 
-        skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 2f, 5, chainLightningPs, gc));
+        skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 5f, 1, chainLightningPs, gc));
         skillIndex++;
         skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, 1.35f, 1, LazerRifflePs, gc));
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
@@ -145,7 +145,7 @@ public class PlayerScript : MonoBehaviour
         if (coll.gameObject.CompareTag("Enemy"))
         {
             coll.gameObject.GetComponent<EnemyHealth>().TakeDamage((float)damage);
-            Debug.Log(coll.gameObject.name + " took " + damage + " damage");
+            //Debug.Log(coll.gameObject.name + " took " + damage + " damage");
             //Destroy(coll.gameObject);
         }
     }
@@ -170,15 +170,28 @@ public class PlayerScript : MonoBehaviour
                 Resume();
                 break;
             case 1: //Cooldown rate
+                foreach (Skill s in skills)
+                {
+                    s.Cooldown -= 0.1f;
+                }
                 Resume();
                 break;
             case 2: //Max health
+                health += 100;
+                if (health > maxHealth)
+                {
+                    health = maxHealth;
+                }
                 Resume();
                 break;
             case 3: //Health regen
                 Resume();
                 break;
             case 4: //Damage
+                foreach (Skill s in skills)
+                {
+                    s.Damage += 2;
+                }
                 Resume();
                 break;
         }
