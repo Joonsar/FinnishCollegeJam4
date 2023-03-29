@@ -76,7 +76,6 @@ public class LevelGenerator : MonoBehaviour
         }
         if (tileSpawnList[tileID].GetComponent<TileManager>().size.y > 1 && z <= mapSize - 1)
         {
-            print("Z");
             if (map[x, z + 1] != null || z >= mapSize - 1)
             {
                 tileID = 0;
