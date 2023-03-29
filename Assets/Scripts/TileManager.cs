@@ -15,11 +15,8 @@ public class TileManager : MonoBehaviour
     public int vehiclesMax = 4;
     public List<Vector3> vehicleSpawnLocations;
 
-    [Header("ClutterSpawns")]
-    public List<GameObject> clutterObjects;
-    public int clutterObjectsMin = 5;
-    public int clutterObjectsMax = 12;
-    public List<Vector3> clutterLocations;
+    [Header("Enemy Spawns")]
+    public List<Vector3> enemySpawnPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -35,21 +32,6 @@ public class TileManager : MonoBehaviour
             int location = (int)(Random.value * vehicleSpawnLocations.Count);
             GameObject vehicle = Instantiate(vehicles[(int)(Random.value * vehicles.Count)], transform.position + vehicleSpawnLocations[location], Quaternion.Euler(Vector3.up * Random.value * 360));
             vehicleSpawnLocations.RemoveAt(location);
-        }
-    }
-
-    void SpawnClutter()
-    {
-        int clutterCount = clutterObjectsMin + (int)(Random.value * (clutterObjectsMax - clutterObjectsMin));
-        for (int i = 0; i < clutterCount; i++)
-        {
-            if(clutterLocations.Count > 0)
-            {
-                int location = (int)(Random.value * clutterLocations.Count);
-                GameObject clutter = Instantiate(clutterObjects[(int)(Random.value * clutterObjects.Count)], transform.position + clutterLocations[location], Quaternion.Euler(Vector3.up * Random.value * 360));
-                clutterLocations.RemoveAt(location);
-                clutter.transform.parent = transform;
-            }    
         }
     }
 
@@ -69,7 +51,7 @@ public class TileManager : MonoBehaviour
     {
         foreach(Vector3 plot in plots)
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.green;
             Gizmos.DrawSphere(transform.position + plot, 1f);
         }
         foreach (Vector3 loc in vehicleSpawnLocations)
@@ -77,9 +59,9 @@ public class TileManager : MonoBehaviour
             Gizmos.color = Color.blue;
             Gizmos.DrawCube(transform.position + loc, Vector3.one);
         }
-        foreach (Vector3 loc in clutterLocations)
+        foreach (Vector3 loc in enemySpawnPoints)
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.red;
             Gizmos.DrawCube(transform.position + loc, Vector3.one / 2);
         }
     }

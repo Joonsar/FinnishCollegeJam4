@@ -3347,32 +3347,11 @@ MonoBehaviour:
   - {x: 28.1, y: 0, z: -11.9}
   - {x: 14.3, y: 0, z: -11.7}
   - {x: -0.78, y: 0, z: -12.42}
-  clutterObjects:
-  - {fileID: 1092547817694420, guid: b377a79f6a3b3ac44ba919ed12be6ce4, type: 3}
-  - {fileID: 1095600368890880, guid: 21e1771c27a671147b188378c5b1da6e, type: 3}
-  - {fileID: 1168353465961796, guid: 315f2acd02ded7a458e8ae77a8d7db44, type: 3}
-  - {fileID: 1586275792966676, guid: 36671c50e5b866247937253a255b19aa, type: 3}
-  - {fileID: 1183212502589018, guid: 8c52c17108ac4d14b93017d91e804006, type: 3}
-  - {fileID: 1629148013400474, guid: 1ee01e3914857ae4fa119ebdb8148880, type: 3}
-  - {fileID: 1006559716165556, guid: db23fa03d8d74e349bbc089974917029, type: 3}
-  - {fileID: 1887554220882472, guid: 0ce30e0f6a3b2b947abfcccbf06f2cdf, type: 3}
-  - {fileID: 1475980397980410, guid: abc342a947c02fe42b97460526b073e4, type: 3}
-  - {fileID: 1128876232207698, guid: 36ca5a606dea1eb4093d9afc773ea943, type: 3}
-  - {fileID: 1272814701391192, guid: 71cd22b8bb52e62449fd0023abb58750, type: 3}
-  - {fileID: 1868297174893950, guid: 28f2883c42945194b9a7df1e5c8544c5, type: 3}
-  - {fileID: 1149949497240620, guid: 6327f3b529212ab4692c4ce3714ab082, type: 3}
-  - {fileID: 1188363182601576, guid: 5de9807b57f4b6b458c52fa853b6e16b, type: 3}
-  - {fileID: 1144276481531230, guid: debe807fa5b29714089d99f8db9c2c48, type: 3}
-  - {fileID: 1133998300418894, guid: 284c9b45742e87d4fa48a08a2ba995be, type: 3}
-  clutterObjectsMin: 5
-  clutterObjectsMax: 12
-  clutterLocations:
-  - {x: 8.8, y: 0, z: 7.54}
-  - {x: 8.8, y: 0, z: -7.19}
-  - {x: -8.15, y: 0, z: -7.19}
-  - {x: -8.15, y: 0, z: 9.05}
-  - {x: -3.82, y: 0, z: 6.14}
-  - {x: 36.83, y: 0, z: -6}
+  enemySpawnPoints:
+  - {x: -7.5, y: 0, z: 0}
+  - {x: 37.5, y: 0, z: 0}
+  - {x: 15, y: 0, z: 7.5}
+  - {x: 15, y: 0, z: -7.5}
 --- !u!1001 &383658913340595565
 PrefabInstance:
   m_ObjectHideFlags: 0

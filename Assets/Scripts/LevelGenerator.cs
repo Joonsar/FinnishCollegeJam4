@@ -18,7 +18,7 @@ public class LevelGenerator : MonoBehaviour
     public int mapSize = 4;
 
     public List<GameObject> tileSpawnList = new List<GameObject>();
-    GameObject[,] map;
+    public GameObject[,] map;
 
 
     // Start is called before the first frame update

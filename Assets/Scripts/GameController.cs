@@ -14,8 +14,8 @@ public class GameController : MonoBehaviour
 
     public Transform navmesh;
 
-
-
+    LevelGenerator generator;
+    public int spawnClock = 1;
 
 
     public GameObject enemyPrefab;
@@ -24,25 +24,51 @@ public class GameController : MonoBehaviour
     {
         Bounds bounds = navmesh.GetComponent<MeshFilter>().mesh.bounds;
         enemies = new List<GameObject>();
-
+        generator = GetComponent<LevelGenerator>();
 
         player = GameObject.FindGameObjectWithTag("Player");
+        /*
         for (int i = 0; i < maxEnemies; i++)
         {
             Vector3 randomPoint = new Vector3(
             Random.Range(bounds.min.x, bounds.max.x),
             bounds.max.y,
             Random.Range(bounds.min.z, bounds.max.z)
-    );
+            );
             GameObject go = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], randomPoint, Quaternion.identity) as GameObject;
             enemies.Add(go);
         }
+        */
+        InvokeRepeating("EnemySpawns", 0, spawnClock);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    public void EnemySpawns()
+    {
+        if(enemies.Count < maxEnemies)
+        {
+            //Valitaan tile, jonka spawn pointteja käytetään
+            GameObject chosenTile = generator.map[1,1];
+            foreach(GameObject t in generator.map)
+            {
+                if(t != null)
+                {
+                    if (Vector3.Distance(t.transform.position, player.transform.position) < Vector3.Distance(t.transform.position, player.transform.position))
+                    {
+                        chosenTile = t;
+                    }
+                }             
+            }
+            TileManager tile = chosenTile.GetComponent<TileManager>();
+            GameObject go = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], 
+                chosenTile.transform.position + tile.enemySpawnPoints[Random.Range(0, tile.enemySpawnPoints.Count)], 
+                Quaternion.identity);
+        }
     }
 
     public void InvokeSkill(Skill skill)

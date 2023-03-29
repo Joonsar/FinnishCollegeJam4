@@ -1001,6 +1001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278105617}
   - component: {fileID: 278105616}
+  - component: {fileID: 278105618}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1027,6 +1028,7 @@ MonoBehaviour:
   - {fileID: 1659918323858617799, guid: 504697cb62a2b8244a2f6a7e35d4caa2, type: 3}
   - {fileID: 1659918323858617799, guid: ce5930561f735144cb6ee052f32e289d, type: 3}
   navmesh: {fileID: 1670418367}
+  spawnClock: 1
   enemyPrefab: {fileID: 6052199533319089720, guid: 2572e0bc6de6fec4c97afe008b89b62a, type: 3}
 --- !u!4 &278105617
 Transform:
@@ -1036,13 +1038,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278105615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.036476, y: 37.38987, z: 85.22399}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &278105618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278105615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a3c02a80144ac4a83115dd5ae25793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - name: Crossroad Tile
+    tile: {fileID: 9155732071972059229, guid: a97ea9d8606172240a0355145859b8cc, type: 3}
+    weight: 5
+  - name: Long Tile X
+    tile: {fileID: 9155732071972059229, guid: 392e3ec4cf3ee05458c9762c485d2610, type: 3}
+    weight: 2
+  - name: Long Tile Y
+    tile: {fileID: 9155732071972059229, guid: aa5bed6da44604e45b06132045c8bcdc, type: 3}
+    weight: 2
+  - name: Double Tile
+    tile: {fileID: 9155732071972059229, guid: de753597d82af8947921092b8b1e9fc2, type: 3}
+    weight: 1
+  seed: 0
+  mapSize: 4
+  tileSpawnList: []
 --- !u!1 &313002392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,7 +1480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 12469572072521122, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1535,6 +1565,10 @@ PrefabInstance:
     - target: {fileID: 8101633944439885053, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8101633944439885053, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: m_Constraints
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8101633944439885053, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_IsKinematic
@@ -2523,7 +2557,7 @@ PrefabInstance:
       objectReference: {fileID: 154232016}
     - target: {fileID: 3208522699527739397, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3208522699527739397, guid: 0a35f026f2634c04fbee981eb430bcb4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5312,7 +5346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753802576
 GameObject:
@@ -5814,7 +5848,7 @@ Transform:
   - {fileID: 2102929413}
   - {fileID: 2067670813}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915425651
 GameObject:
@@ -7012,66 +7046,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106991536}
   m_Mesh: {fileID: 4300000, guid: b8258342a3df5b14cac241f34dfe4c2b, type: 3}
---- !u!1 &2121081711
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2121081713}
-  - component: {fileID: 2121081712}
-  m_Layer: 0
-  m_Name: MapGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2121081712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121081711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a3c02a80144ac4a83115dd5ae25793, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiles:
-  - name: Crossroad Tile
-    tile: {fileID: 9155732071972059229, guid: a97ea9d8606172240a0355145859b8cc, type: 3}
-    weight: 5
-  - name: Long Tile X
-    tile: {fileID: 9155732071972059229, guid: 392e3ec4cf3ee05458c9762c485d2610, type: 3}
-    weight: 2
-  - name: Long Tile Y
-    tile: {fileID: 9155732071972059229, guid: aa5bed6da44604e45b06132045c8bcdc, type: 3}
-    weight: 2
-  - name: Double Tile
-    tile: {fileID: 9155732071972059229, guid: de753597d82af8947921092b8b1e9fc2, type: 3}
-    weight: 1
-  seed: 0
-  mapSize: 4
-  tileSpawnList: []
---- !u!4 &2121081713
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121081711}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236944556312344
 GameObject:
   m_ObjectHideFlags: 0
@@ -9130,7 +9104,7 @@ RectTransform:
   - {fileID: 1230423051675799407}
   - {fileID: 1230423052147850567}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
