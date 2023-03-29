@@ -42,11 +42,11 @@ public class PlayerScript : MonoBehaviour
         animator = GetComponent<Animator>();
 
 
-        skills.Add(new Skill(skillIndex, "Chain Lightning", 10, Random.Range(2f, 20f), 1, chainLightningPs, gc));
+        skills.Add(new Skill(skillIndex, "Chain Lightning", 10, Random.Range(2f, 20f), chainLightningPs, gc));
         skillIndex++;
-        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), 5, LazerRifflePs, gc));
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), LazerRifflePs, gc));
         skillIndex++;
-        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), 5, LazerRifflePs, gc));
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), LazerRifflePs, gc));
 
 
     }
@@ -148,24 +148,6 @@ public class PlayerScript : MonoBehaviour
         speed += amount;
         Resume();
 
-    }
-
-    public void LevelUp(int attribute)
-    {
-        switch (attribute)
-        {
-            case 0: //Movement speed
-                speed += 1;
-                Resume();
-                break;
-            case 1: //Cooldown speed
-                Resume();
-                break;
-            case 2: //Max Health
-                Resume();
-                maxHealth += 10;
-                break;
-        }
     }
 
     public void IncreaseMaxHealth(int amount)
