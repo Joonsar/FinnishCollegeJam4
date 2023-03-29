@@ -24,7 +24,7 @@ public class AudioController : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        PlayAudio(Audios.blackholesound);
+
     }
 
     // Update is called once per frame

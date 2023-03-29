@@ -74,10 +74,11 @@ public class GameController : MonoBehaviour
         }
         if (skill.Name == "Chain Lightning")
         {
-            audioController.PlayAudio(Audios.blackholesound);
+            //audioController.PlayAudio(Audios.blackholesound);
             for (int i = 0; i < skill.Level; i++)
             {
                 ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.identity) as ParticleSystem;
+                part.GetComponent<ParticleCollision>().damage = skill.Damage;
                 Destroy(part.gameObject, 5);
             }
         }
@@ -97,6 +98,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < skill.Level; i++)
             {
                 ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(0, 1f, 0), lookRotation) as ParticleSystem;
+                part.GetComponent<ParticleCollision>().damage = skill.Damage;
                 Destroy(part.gameObject, 2);
             }
             audioController.PlayAudio(Audios.riffleSound);

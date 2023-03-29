@@ -7,7 +7,7 @@ public class ParticleCollision : MonoBehaviour
     ParticleSystem ps;
 
 
-    public int damage = 10;
+    public float damage = 10;
     void Start()
     {
 
@@ -19,25 +19,26 @@ public class ParticleCollision : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("hit by blackhole");
+
             other.GetComponent<EnemyHealth>().TakeDamage(damage);
         }
     }
 
-    private void OnTriggerEnter(Collider col)
-    {
+    /*  private void OnTriggerEnter(Collider col)
+      {
 
-        if (col.gameObject.CompareTag("Enemy"))
-        {
-            col.GetComponent<EnemyHealth>().TakeDamage(damage);
-        }
-    }
+          if (col.gameObject.CompareTag("Enemy"))
+          {
+              col.GetComponent<EnemyHealth>().TakeDamage(damage);
+          }
+      } */
 
     private void OnTriggerStay(Collider col)
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
-            col.GetComponent<EnemyHealth>().TakeDamage(0.1f);
+
+            col.GetComponent<EnemyHealth>().TakeDamage(damage / 100);
         }
     }
 
