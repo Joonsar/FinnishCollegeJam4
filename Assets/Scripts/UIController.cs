@@ -46,7 +46,7 @@ public class UIController : MonoBehaviour
     public void ChangePlayerHealthbarValue(int health, int maxHealth)
     {
         playerHealthBar.fillAmount = (float)health / maxHealth;
-        Debug.Log((float)health / maxHealth);
+
     }
 
     public void ActivateLevelUpPanel()

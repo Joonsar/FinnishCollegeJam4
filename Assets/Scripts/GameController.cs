@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour
             Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
             for (int i = 0; i < skill.Level; i++)
             {
-                ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(0, 0.5f, 0), lookRotation) as ParticleSystem;
+                ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(0, 1f, 0), lookRotation) as ParticleSystem;
                 Destroy(part.gameObject, 2);
             }
             audioController.PlayAudio(Audios.riffleSound);
