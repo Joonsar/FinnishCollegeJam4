@@ -44,9 +44,11 @@ public class PlayerScript : MonoBehaviour
         animator = GetComponent<Animator>();
 
 
-        skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 5f, 1, chainLightningPs, gc));
-        skillIndex++;
+
+
         skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, 1.35f, 1, LazerRifflePs, gc));
+        skillIndex++;
+        skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 5f, 1, chainLightningPs, gc));
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
 
 
