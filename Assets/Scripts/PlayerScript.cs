@@ -150,6 +150,28 @@ public class PlayerScript : MonoBehaviour
 
     }
 
+    public void LevelUp(int passive)
+    {
+        switch (passive)
+        {
+            case 0: //Movement speed
+                Resume();
+                break;
+            case 1: //Cooldown rate
+                Resume();
+                break;
+            case 2: //Max health
+                Resume();
+                break;
+            case 3: //Health regen
+                Resume();
+                break;
+            case 4: //Damage
+                Resume();
+                break;
+        }
+    }
+
     public void IncreaseMaxHealth(int amount)
     {
         Debug.Log("testi");
