@@ -169,15 +169,33 @@ public class PlayerScript : MonoBehaviour
                 Resume();
                 break;
             case 1: //Cooldown rate
+                foreach (Skill s in skills)
+                {
+                    s.Cooldown -= 0.1F;
+                    if (s.Cooldown <= 0.5f)
+                    {
+                        s.Cooldown = 0.5f;
+                    }
+                }
                 Resume();
                 break;
             case 2: //Max health
+                health += 100;
+                if (health >= maxHealth)
+                {
+                    health = maxHealth;
+                }
                 Resume();
                 break;
             case 3: //Health regen
+
                 Resume();
                 break;
             case 4: //Damage
+                foreach (Skill s in skills)
+                {
+                    s.Damage += 1f;
+                }
                 Resume();
                 break;
         }
