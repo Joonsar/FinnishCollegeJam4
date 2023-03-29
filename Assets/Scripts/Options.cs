@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Options : MonoBehaviour
 {
     public Toggle fullscreenTog;
-    public Toggle vsyncTog;
+    private Toggle vsyncTog;
 
     public List<ResItem> resolutions = new List<ResItem>();
     private int selectedResolution;
@@ -18,14 +18,14 @@ public class Options : MonoBehaviour
     {
         fullscreenTog.isOn = Screen.fullScreen;
 
-        if (QualitySettings.vSyncCount == 0)
-        {
-            vsyncTog.isOn = false;
-        }
-        else
-        {
-            vsyncTog.isOn = true;
-        }
+        //if (QualitySettings.vSyncCount == 0)
+        //{
+        //    vsyncTog.isOn = false;
+        //}
+        //else
+        //{
+        //    vsyncTog.isOn = true;
+        //}
         bool foundRes = false;
         for (int i = 0; i < resolutions.Count; i++)
         {
@@ -88,16 +88,16 @@ public class Options : MonoBehaviour
 
     public void ApplyGraphics()
     {
-        // Screen.fullScreen = fullscreenTog.isOn;
+        Screen.fullScreen = fullscreenTog.isOn;
 
-        if (vsyncTog.isOn)
-        {
-            QualitySettings.vSyncCount = 1;
-        }
-        else
-        {
-            QualitySettings.vSyncCount = 0;
-        }
+        //if (vsyncTog.isOn)
+        //{
+        //    QualitySettings.vSyncCount = 1;
+        //}
+        //else
+        //{
+        //    QualitySettings.vSyncCount = 0;
+        //}
 
         Screen.SetResolution(resolutions[selectedResolution].horizontal, resolutions[selectedResolution].vertical, fullscreenTog.isOn);
     }
