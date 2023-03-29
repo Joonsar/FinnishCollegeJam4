@@ -8,12 +8,12 @@ public class Timer : MonoBehaviour
 {
     public float timeRemaining = 600f; // 10 minutes in seconds
     public TextMeshProUGUI timerText;
-    [SerializeField] Animation timerAnimation;
+    private Animator animator;
 
-    //private void Start()
-    //{
-    //    timerAnimation = GetComponent<Animation>();
-    //}
+    private void Start()
+    {
+       animator = GetComponent<Animator>();
+    }
     void Update()
     {
         if (timeRemaining > 0)
@@ -26,10 +26,10 @@ public class Timer : MonoBehaviour
             // End the game
             SceneManager.LoadScene("GameOver"); // Need to Build GameOverScene
         }
-        if (timeRemaining <= 10)
+        if (timeRemaining <= 10 && timeRemaining > 0)
         {
             // Play the animation
-            timerAnimation.Play();
+            animator.Play("Timer");
         }
     }
 }
