@@ -8,7 +8,7 @@ public class Skill
 
     public string Name { get; set; }
     public string Description { get; set; }
-    public int Damage { get; set; }
+    public float Damage { get; set; }
 
     private float currentCooldown;
 
@@ -23,7 +23,7 @@ public class Skill
 
     public GameObject Gc { get; set; }
 
-    public Skill(int id, string name, int damage, float cooldown, int level, ParticleSystem ps, GameObject gc)
+    public Skill(int id, string name, float damage, float cooldown, int level, ParticleSystem ps, GameObject gc)
     {
         Level = level;
         Id = id;

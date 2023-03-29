@@ -2104,6 +2104,7 @@ MonoBehaviour:
   - {fileID: 2189415535778926845, guid: 1ac848d5d69643c4f99af9d01c7f96a0, type: 3}
   - {fileID: 1666700516740808582, guid: c9eebcc363ffea246b302654f430b970, type: 3}
   - {fileID: 7100482624322013293, guid: fb606ebb0c26b7a4f8e748fa9c8dfe1e, type: 3}
+  - {fileID: 4039649593943570484, guid: 4cd51a766adf367498eddbaf5ad1621d, type: 3}
   vehicles:
   - {fileID: 1254837790230190, guid: 34706970fd8733440a9c0f23206a856e, type: 3}
   - {fileID: 1344106213341860, guid: 9e3d7d4d81beecf44b4a9e5768cd8123, type: 3}
