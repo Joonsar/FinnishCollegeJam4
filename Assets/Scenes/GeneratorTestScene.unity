@@ -10440,13 +10440,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071075, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868985452481071075, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: followCam
       value: 
       objectReference: {fileID: 1277292755}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: health
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: followCam
       value: 
       objectReference: {fileID: 1277292755}
+    - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: uiController
       value: 
