@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
         else
         {
             // End the game
-            SceneManager.LoadScene("MainMenu"); // Need to Build GameOverScene
+            SceneManager.LoadScene("GameOver"); // Need to Build GameOverScene
         }
     }
 }
