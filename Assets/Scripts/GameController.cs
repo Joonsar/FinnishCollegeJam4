@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
 
     public List<GameObject> enemyPrefabs;
 
-    public Terrain terrain;
+    public Transform navmesh;
 
 
 
@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     void Start()
 
     {
-        Bounds bounds = terrain.terrainData.bounds;
+        Bounds bounds = navmesh.GetComponent<MeshFilter>().mesh.bounds;
         enemies = new List<GameObject>();
 
 
