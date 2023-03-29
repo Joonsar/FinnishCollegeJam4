@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class PlayerScript : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 6f;
     public float rotateSpeed = 10f;
     public int maxHealth = 100;
     public int health = 100;
