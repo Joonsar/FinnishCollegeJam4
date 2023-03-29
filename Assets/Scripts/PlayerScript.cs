@@ -93,7 +93,7 @@ public class PlayerScript : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
-        uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(amount);
+        uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(health, maxHealth);
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
         CheckDeath();
     }

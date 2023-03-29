@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
 
     public List<GameObject> enemies;
 
+    private AudioController audioController;
+
     private GameObject player;
 
     public List<GameObject> enemyPrefabs;
@@ -22,6 +24,7 @@ public class GameController : MonoBehaviour
     void Start()
 
     {
+        audioController = FindAnyObjectByType<AudioController>();
         Bounds bounds = navmesh.GetComponent<MeshFilter>().mesh.bounds;
         enemies = new List<GameObject>();
         generator = GetComponent<LevelGenerator>();
@@ -34,29 +37,29 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void EnemySpawns()
     {
         maxEnemies = 10 + (int)((600 - GetComponent<Timer>().timeRemaining) * .1f);
-        if(enemies.Count < maxEnemies)
+        if (enemies.Count < maxEnemies)
         {
-            //Valitaan tile, jonka spawn pointteja käytetään
-            GameObject chosenTile = generator.map[1,1];
-            foreach(GameObject t in generator.map)
+            //Valitaan tile, jonka spawn pointteja kï¿½ytetï¿½ï¿½n
+            GameObject chosenTile = generator.map[1, 1];
+            foreach (GameObject t in generator.map)
             {
-                if(t != null)
+                if (t != null)
                 {
                     if (Vector3.Distance(t.transform.position, player.transform.position) < Vector3.Distance(t.transform.position, player.transform.position))
                     {
                         chosenTile = t;
                     }
-                }             
+                }
             }
             TileManager tile = chosenTile.GetComponent<TileManager>();
-            GameObject go = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], 
-                chosenTile.transform.position + tile.enemySpawnPoints[Random.Range(0, tile.enemySpawnPoints.Count)], 
+            GameObject go = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)],
+                chosenTile.transform.position + tile.enemySpawnPoints[Random.Range(0, tile.enemySpawnPoints.Count)],
                 Quaternion.identity);
             enemies.Add(go);
         }
@@ -71,7 +74,9 @@ public class GameController : MonoBehaviour
         }
         if (skill.Name == "Chain Lightning")
         {
-            for (int i = 0; i < skill.Level; i++) {
+            audioController.PlayAudio(Audios.blackholesound);
+            for (int i = 0; i < skill.Level; i++)
+            {
                 ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.identity) as ParticleSystem;
                 Destroy(part.gameObject, 5);
             }
@@ -94,6 +99,7 @@ public class GameController : MonoBehaviour
                 ParticleSystem part = Instantiate(skill.Ps, player.transform.position, lookRotation) as ParticleSystem;
                 Destroy(part.gameObject, 2);
             }
+            audioController.PlayAudio(Audios.riffleSound);
 
 
         }
