@@ -1022,6 +1022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnemies: 50
+  enemies: []
   enemyPrefabs:
   - {fileID: 1659918323858617799, guid: e4f52d763e00c3f4e96d40d3f27d611f, type: 3}
   - {fileID: 1659918323858617799, guid: 7a4ea8b20c737774d8f4994339653e69, type: 3}
