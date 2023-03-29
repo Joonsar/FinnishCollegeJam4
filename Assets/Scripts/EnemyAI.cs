@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 15f;
     [SerializeField] float turnSpeed = 5f;
+    
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
 

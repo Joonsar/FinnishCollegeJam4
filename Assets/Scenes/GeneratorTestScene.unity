@@ -1003,6 +1003,7 @@ GameObject:
   - component: {fileID: 278105616}
   - component: {fileID: 278105618}
   - component: {fileID: 278105619}
+  - component: {fileID: 278105620}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1088,8 +1089,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d0ca920b74f924e9586b187bad6ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 600
+  timeRemaining: 20
   timerText: {fileID: 4299242363554711714}
+  timerAnimation: {fileID: 0}
+--- !u!95 &278105620
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278105615}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 586969baf0b26dd468178437b0748ff8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &313002392
 GameObject:
   m_ObjectHideFlags: 0
@@ -11511,6 +11534,7 @@ GameObject:
   - component: {fileID: 3416579674764737074}
   - component: {fileID: 7635651482520793236}
   - component: {fileID: 4299242363554711714}
+  - component: {fileID: 8781612036793162562}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11518,3 +11542,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &8781612036793162562
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781612036793162561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 586969baf0b26dd468178437b0748ff8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
