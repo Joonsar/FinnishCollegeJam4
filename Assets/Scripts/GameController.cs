@@ -97,8 +97,11 @@ public class GameController : MonoBehaviour
             lookDirection.y = 0;
             //Debug.Log(lookDir);
             Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
-            ParticleSystem part = Instantiate(skill.Ps, player.transform.position, lookRotation) as ParticleSystem;
-            Destroy(part.gameObject, 2);
+            for (int i = 0; i < skill.Level; i++)
+            {
+                ParticleSystem part = Instantiate(skill.Ps, player.transform.position, lookRotation) as ParticleSystem;
+                Destroy(part.gameObject, 2);
+            }
 
 
         }
