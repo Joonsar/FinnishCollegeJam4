@@ -44,9 +44,11 @@ public class PlayerScript : MonoBehaviour
         animator = GetComponent<Animator>();
 
 
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", 10, 1.35f, 1, LazerRifflePs, gc));
+        skillIndex++;
         skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 5f, 1, chainLightningPs, gc));
         skillIndex++;
-        skills.Add(new Skill(skillIndex, "Lazer Riffle", 20, 1.35f, 1, LazerRifflePs, gc));
+
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
 
 
@@ -89,6 +91,7 @@ public class PlayerScript : MonoBehaviour
         rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * movement);
         //AddExperience(0.01f);
     }
+
 
 
 
@@ -185,6 +188,8 @@ public class PlayerScript : MonoBehaviour
                 {
                     health = maxHealth;
                 }
+                uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(health, maxHealth);
+                uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
                 Resume();
                 break;
             case 3: //Health regen
