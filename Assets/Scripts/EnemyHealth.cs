@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] float hitPoints = 100f;
+    [SerializeField] float hitPoints = 50f;
 
     public float CurrentHitPoints
     {
@@ -12,13 +12,13 @@ public class EnemyHealth : MonoBehaviour
     }
 
     [SerializeField] GameObject explosionPrefab;
-    
+
     private GameObject player;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-     
+
     }
 
 

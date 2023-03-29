@@ -8,7 +8,8 @@ public enum Audios
     riffleSound,
     blackholesound,
 
-    flamethrowsound
+    flamethrowsound,
+    levelupsound
 }
 public class AudioController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class AudioController : MonoBehaviour
     public AudioClip blackholeSoundPrefab;
 
     public AudioClip flamethrowerSoundPrefab;
+    public AudioClip levelupSoundPrefab;
 
     private AudioSource audioSource;
 
@@ -44,6 +46,9 @@ public class AudioController : MonoBehaviour
                 break;
             case (Audios.flamethrowsound):
                 audioSource.PlayOneShot(flamethrowerSoundPrefab);
+                break;
+            case (Audios.levelupsound):
+                audioSource.PlayOneShot(levelupSoundPrefab);
                 break;
             default:
                 break;

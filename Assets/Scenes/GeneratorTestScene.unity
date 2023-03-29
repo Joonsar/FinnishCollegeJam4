@@ -4857,6 +4857,7 @@ MonoBehaviour:
   riffleSoundPrefab: {fileID: 8300000, guid: 8fb81d0fb033ed04bbe838a52d0ea27b, type: 3}
   blackholeSoundPrefab: {fileID: 8300000, guid: 196adc5c9bc440542a7d792e1ebdcf70, type: 3}
   flamethrowerSoundPrefab: {fileID: 8300000, guid: 6320ce94457542a4998e05c36a4398e8, type: 3}
+  levelupSoundPrefab: {fileID: 8300000, guid: 4c2ab6e72f622f841b95d7e0ca454a83, type: 3}
 --- !u!4 &1514689008
 Transform:
   m_ObjectHideFlags: 0

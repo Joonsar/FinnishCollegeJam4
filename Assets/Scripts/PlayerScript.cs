@@ -31,12 +31,14 @@ public class PlayerScript : MonoBehaviour
 
     private int skillIndex = 0;
 
+    private AudioController audioController;
+
 
     // Start is called before the first frame update
     void Start()
     {
         gc = GameObject.FindGameObjectWithTag("GameController");
-
+        audioController = GameObject.FindObjectOfType<AudioController>();
         rb = GetComponent<Rigidbody>();
         skills = new List<Skill>();
         animator = GetComponent<Animator>();
@@ -44,9 +46,8 @@ public class PlayerScript : MonoBehaviour
 
         skills.Add(new Skill(skillIndex, "Chain Lightning", 10, Random.Range(2f, 20f), 5, chainLightningPs, gc));
         skillIndex++;
-        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), 5, LazerRifflePs, gc));
-        skillIndex++;
-        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, Random.Range(1f, 2f), 5, LazerRifflePs, gc));
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, 0.5f, 1, LazerRifflePs, gc));
+
 
 
     }
@@ -121,6 +122,15 @@ public class PlayerScript : MonoBehaviour
             uiController.GetComponent<UIController>().ChangeLevelText("Level " + level);
             uiController.GetComponent<UIController>().SetLevelSlider(0f);
             uiController.GetComponent<UIController>().ActivateLevelUpPanel();
+            foreach (Skill s in skills)
+            {
+                if (s.Name == "Lazer Riffle")
+                {
+                    s.Level++;
+                }
+
+            }
+            audioController.PlayAudio(Audios.levelupsound);
             Time.timeScale = 0;
         }
 
