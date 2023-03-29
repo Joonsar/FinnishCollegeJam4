@@ -17,13 +17,15 @@ public class Skill
     public float Cooldown { get; set; }
 
     public int Id { get; set; }
+
+    public int Level { get; set; }
     public ParticleSystem Ps { get; set; }
 
     public GameObject Gc { get; set; }
 
-    public Skill(int id, string name, int damage, float cooldown, ParticleSystem ps, GameObject gc)
+    public Skill(int id, string name, int damage, float cooldown, int level, ParticleSystem ps, GameObject gc)
     {
-
+        Level = level;
         Id = id;
         Name = name;
         Cooldown = cooldown;

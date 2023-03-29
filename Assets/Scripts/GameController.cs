@@ -71,8 +71,10 @@ public class GameController : MonoBehaviour
         }
         if (skill.Name == "Chain Lightning")
         {
-            ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.identity) as ParticleSystem;
-            Destroy(part.gameObject, 5);
+            for (int i = 0; i < skill.Level; i++) {
+                ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.identity) as ParticleSystem;
+                Destroy(part.gameObject, 5);
+            }
         }
 
         if (skill.Name == "Lazer Riffle")
@@ -87,8 +89,11 @@ public class GameController : MonoBehaviour
             lookDirection.y = 0;
             //Debug.Log(lookDir);
             Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
-            ParticleSystem part = Instantiate(skill.Ps, player.transform.position, lookRotation) as ParticleSystem;
-            Destroy(part.gameObject, 2);
+            for (int i = 0; i < skill.Level; i++)
+            {
+                ParticleSystem part = Instantiate(skill.Ps, player.transform.position, lookRotation) as ParticleSystem;
+                Destroy(part.gameObject, 2);
+            }
 
 
         }
