@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     public int maxEnemies = 50;
 
-    private List<GameObject> enemies;
+    public List<GameObject> enemies;
 
     private GameObject player;
 
@@ -68,6 +68,7 @@ public class GameController : MonoBehaviour
             GameObject go = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], 
                 chosenTile.transform.position + tile.enemySpawnPoints[Random.Range(0, tile.enemySpawnPoints.Count)], 
                 Quaternion.identity);
+            enemies.Add(go);
         }
     }
 
@@ -82,8 +83,6 @@ public class GameController : MonoBehaviour
         {
             ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5)), Quaternion.identity) as ParticleSystem;
             Destroy(part.gameObject, 5);
-
-
         }
 
         if (skill.Name == "Lazer Riffle")

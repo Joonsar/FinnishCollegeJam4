@@ -37,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
             Debug.Log("Enemy took damage");
             player.GetComponent<PlayerScript>().AddExperience(0.1f);
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().enemies.Remove(gameObject);
             Destroy(gameObject);
         }
     }
