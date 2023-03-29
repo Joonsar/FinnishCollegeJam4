@@ -43,9 +43,10 @@ public class UIController : MonoBehaviour
         levelSlider.value = v;
     }
 
-    public void ChangePlayerHealthbarValue(int amount)
+    public void ChangePlayerHealthbarValue(int health, int maxHealth)
     {
-        playerHealthBar.fillAmount -= (float)amount / 100;
+        playerHealthBar.fillAmount = (float)health / maxHealth;
+        Debug.Log((float)health / maxHealth);
     }
 
     public void ActivateLevelUpPanel()
@@ -62,6 +63,7 @@ public class UIController : MonoBehaviour
     public void ChangePlayerHealthText(int health, int maxHealth)
     {
         playerHealthText.text = health + "/" + maxHealth;
+
     }
 
     public void ChangeSkillCooldown(int id, float cooldown)
