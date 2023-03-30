@@ -20,6 +20,8 @@ public class PlayerScript : MonoBehaviour
 
     public ParticleSystem LazerRifflePs;
 
+    [SerializeField] GameObject explosionPrefab;
+
     private Vector3 mousePosition;
     private List<Skill> skills;
     private Animator animator;
@@ -111,6 +113,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Die();
         }
     }
