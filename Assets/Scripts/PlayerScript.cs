@@ -51,11 +51,11 @@ public class PlayerScript : MonoBehaviour
         skills = new List<Skill>();
         animator = GetComponent<Animator>();
 
-
-        skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 5f, 1, chainLightningPs, gc));
-        skillIndex++;
         skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, 1.35f, 1, LazerRifflePs, gc));
         skillIndex++;
+        skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 5f, 1, chainLightningPs, gc));
+        skillIndex++;
+        
         skills.Add(new Skill(skillIndex, "Flamethrower", 40, 2f, 1, flameThrowerPs, gc));
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
       
@@ -210,6 +210,37 @@ public class PlayerScript : MonoBehaviour
                 foreach (Skill s in skills)
                 {
                     s.Damage += 2;
+                }
+                Resume();
+                break;
+            case 5:
+                foreach(Skill s in skills)
+                {
+                    if(s.Name == "Lazer Riffle")
+                    {
+                        s.Level++;
+                    }
+                    
+                }
+                Resume();
+                break;
+            case 6:
+                foreach (Skill s in skills)
+                {
+                    if (s.Name == "Chain Lightning")
+                    {
+                        s.Level++;
+                    }
+                }
+                Resume();
+                break;
+            case 7:
+                foreach (Skill s in skills)
+                {
+                    if (s.Name == "Flamethrower")
+                    {
+                        s.Level++;
+                    }
                 }
                 Resume();
                 break;
