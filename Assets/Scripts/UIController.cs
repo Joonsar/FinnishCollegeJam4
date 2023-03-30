@@ -15,10 +15,18 @@ public class UIController : MonoBehaviour
     public Image playerHealthBar;
     public List<Button> levelUpButtons = new List<Button>();
     public List<GameObject> skillCooldownButtons = new List<GameObject>();
+
+    Animator levelUpAnim;
+    public GameObject levelit;
+    private bool levelup = false;
+
+  
+
     // Start is called before the first frame update
     void Start()
     {
-
+        levelUpAnim = levelit.GetComponent<Animator>();
+       
     }
 
     // Update is called once per frame
@@ -36,6 +44,8 @@ public class UIController : MonoBehaviour
     public void ChangeLevelText(string text)
     {
         levelText.text = text;
+
+    
     }
 
     public void SetLevelSlider(float v)
@@ -51,6 +61,13 @@ public class UIController : MonoBehaviour
 
     public void ActivateLevelUpPanel()
     {
+     
+
+        levelup = true;
+        Debug.Log("LevelUp");
+        levelUpAnim.Play("Levelup");
+        levelup = false;
+
         levelUpPanel.SetActive(true);
     }
 

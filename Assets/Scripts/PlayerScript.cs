@@ -38,14 +38,8 @@ public class PlayerScript : MonoBehaviour
 
     public bool isAlive = true;
 
-    Animator levelUpAnim;
-    public GameObject levelText;
-    private bool levelup = false;
+ 
 
-    private void Awake()
-    {
-        levelUpAnim = levelText.GetComponent<Animator>();
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -60,22 +54,12 @@ public class PlayerScript : MonoBehaviour
         skillIndex++;
         skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, 1.35f, 1, LazerRifflePs, gc));
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
-
-
-
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            levelup = true;
-            Debug.Log("LevelUp");
-            levelUpAnim.Play("Levelup");
-            levelup = false;
-        }
-
         foreach (Skill sk in skills)
         {
             sk.UpdateSkill();
@@ -168,8 +152,6 @@ public class PlayerScript : MonoBehaviour
             audioController.PlayAudio(Audios.levelupsound);
             Time.timeScale = 0;
         }
-
-
         uiController.GetComponent<UIController>().AdjustLevelSlider(amount);
     }
 
@@ -241,6 +223,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Resume()
     {
+      
         uiController.GetComponent<UIController>().DisableLevelUpPanel();
         Time.timeScale = 1f;
     }
