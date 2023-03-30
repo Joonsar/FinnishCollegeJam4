@@ -10,5 +10,7 @@ public class Pointer : MonoBehaviour
     {
         
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
+
+
     }
 }
