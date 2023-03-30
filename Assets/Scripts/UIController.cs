@@ -79,7 +79,7 @@ public class UIController : MonoBehaviour
 
     public void ChangePlayerHealthText(int health, int maxHealth)
     {
-        playerHealthText.text = health + "/" + maxHealth;
+        playerHealthText.text = "HP \n" + health + "/" + maxHealth;
 
     }
 

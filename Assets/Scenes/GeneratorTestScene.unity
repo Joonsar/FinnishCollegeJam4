@@ -9391,7 +9391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "HP \n1000/1000"
+  m_text: "HP \n999/999"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9df4f8c8ebce1ee4a945a67eceef239b, type: 2}
   m_sharedMaterial: {fileID: 450097891081343547, guid: 9df4f8c8ebce1ee4a945a67eceef239b, type: 2}
@@ -11114,7 +11114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: health
-      value: 1000
+      value: 999
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: followCam
@@ -11126,7 +11126,7 @@ PrefabInstance:
       objectReference: {fileID: 1230423053423166840}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 999
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: uiController
@@ -11150,7 +11150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071092, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071092, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: m_StaticEditorFlags
