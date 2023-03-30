@@ -20,10 +20,13 @@ public class UIController : MonoBehaviour
     public GameObject levelit;
     private bool levelup = false;
 
+  
+
     // Start is called before the first frame update
     void Start()
     {
         levelUpAnim = levelit.GetComponent<Animator>();
+       
     }
 
     // Update is called once per frame
@@ -58,6 +61,8 @@ public class UIController : MonoBehaviour
 
     public void ActivateLevelUpPanel()
     {
+     
+
         levelup = true;
         Debug.Log("LevelUp");
         levelUpAnim.Play("Levelup");
