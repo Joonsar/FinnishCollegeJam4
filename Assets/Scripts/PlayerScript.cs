@@ -38,7 +38,14 @@ public class PlayerScript : MonoBehaviour
 
     public bool isAlive = true;
 
+    Animator levelUpAnim;
+    public GameObject levelText;
+    private bool levelup = false;
 
+    private void Awake()
+    {
+        levelUpAnim = levelText.GetComponent<Animator>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +68,14 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            levelup = true;
+            Debug.Log("LevelUp");
+            levelUpAnim.Play("Levelup");
+            levelup = false;
+        }
+
         foreach (Skill sk in skills)
         {
             sk.UpdateSkill();
@@ -141,7 +156,6 @@ public class PlayerScript : MonoBehaviour
             exp = 0f;
             uiController.GetComponent<UIController>().ChangeLevelText("Level " + level);
             uiController.GetComponent<UIController>().SetLevelSlider(0f);
-            animator.Play("LevelUp");
             uiController.GetComponent<UIController>().ActivateLevelUpPanel();
             foreach (Skill s in skills)
             {

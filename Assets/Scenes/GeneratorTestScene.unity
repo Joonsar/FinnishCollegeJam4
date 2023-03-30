@@ -1090,6 +1090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRemaining: 600
   timerText: {fileID: 4299242363554711714}
+  timeText: {fileID: 4778780976968938808}
 --- !u!1 &313002392
 GameObject:
   m_ObjectHideFlags: 0
@@ -10199,6 +10200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7950834873105438485}
+  - component: {fileID: 7950834873105438486}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -10653,6 +10655,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1277292755}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 1230423053423166840}
+    - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: maxHealth
       value: 1000
       objectReference: {fileID: 0}
@@ -11039,6 +11045,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -53.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &7950834873105438486
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778780976968938808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1c3fdd4e15e04a24f9d67a8a4eef15cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8074451692901250387
 GameObject:
   m_ObjectHideFlags: 0

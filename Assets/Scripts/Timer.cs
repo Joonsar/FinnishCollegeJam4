@@ -10,9 +10,14 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerText;
     private Animator animator;
 
+    Animator timeUp;
+    public GameObject timeText;
+    private bool times = false;
+
     private void Start()
     {
        animator = GetComponent<Animator>();
+       timeUp = timeText.GetComponent<Animator>();
     }
     void Update()
     {
@@ -29,7 +34,10 @@ public class Timer : MonoBehaviour
         if (timeRemaining <= 10 && timeRemaining > 0)
         {
             // Play the animation
-            animator.Play("Timer");
+            times = true;
+            Debug.Log("Time is Running out");
+            timeUp.Play("TimerAnim");
+            times = false;
         }
     }
 }
