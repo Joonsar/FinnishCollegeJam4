@@ -3,7 +3,8 @@ guid: 75e0fa04e64ccf845a6210b12c1ff5e5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cursorTexture: {fileID: 2800000, guid: 6d311fdd7fe8a384fb49057c5a8269e1, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
