@@ -9189,6 +9189,7 @@ GameObject:
   - component: {fileID: 1230423053236687698}
   - component: {fileID: 1230423053236687696}
   - component: {fileID: 1230423053236687697}
+  - component: {fileID: 1230423053236687700}
   m_Layer: 5
   m_Name: LevelUpPanel
   m_TagString: Untagged
@@ -9196,6 +9197,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!95 &1230423053236687700
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230423053236687699}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d25fb7ab95708f48b04f53d5a93c30a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!222 &1230423053277106519
 CanvasRenderer:
   m_ObjectHideFlags: 0
