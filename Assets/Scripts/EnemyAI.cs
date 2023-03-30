@@ -102,7 +102,7 @@ public class EnemyAI : MonoBehaviour
         Projectile projectileComponent = projectile.GetComponent<Projectile>();
 
         // Set the speed of the projectile
-        projectileComponent.speed = 10f;
+        projectileComponent.speed = 15f;
 
         // Set the direction of the projectile towards the player
         Vector3 direction = (target.position + new Vector3(0, 1f, 0) - projectileSpawnPoint.position).normalized;

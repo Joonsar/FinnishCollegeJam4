@@ -37,7 +37,7 @@ public class UIController : MonoBehaviour
 
     public void AdjustLevelSlider(float amount)
     {
-        levelSlider.value += amount;
+        levelSlider.value = amount;
 
     }
 

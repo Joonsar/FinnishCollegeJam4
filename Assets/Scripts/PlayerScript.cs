@@ -15,6 +15,12 @@ public class PlayerScript : MonoBehaviour
     public int damage = 4;
     private Rigidbody rb;
     private Vector3 movement;
+    public float shotgunDamage = 15;
+    public float shotgunCooldown = 1.35f;
+    public float flamethrowerDamage = 1;
+    public float flamethrowerCooldown = 3f;
+    public float blackholeDamage = 30;
+    public float blackholeCooldown = 5f;
 
     public ParticleSystem chainLightningPs;
 
@@ -39,7 +45,7 @@ public class PlayerScript : MonoBehaviour
     private AudioController audioController;
 
     public bool isAlive = true;
-
+    public float levelCap = 1f;
  
 
     // Start is called before the first frame update
@@ -51,12 +57,12 @@ public class PlayerScript : MonoBehaviour
         skills = new List<Skill>();
         animator = GetComponent<Animator>();
 
-        skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, 1.35f, 1, LazerRifflePs, gc));
+        skills.Add(new Skill(skillIndex, "Lazer Riffle", shotgunDamage, shotgunCooldown, 1, LazerRifflePs, gc));
         skillIndex++;
-        skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 5f, 1, chainLightningPs, gc));
+        skills.Add(new Skill(skillIndex, "Flamethrower", flamethrowerDamage, flamethrowerCooldown, 1, flameThrowerPs, gc));  
         skillIndex++;
-        
-        skills.Add(new Skill(skillIndex, "Flamethrower", 40, 2f, 1, flameThrowerPs, gc));
+        skills.Add(new Skill(skillIndex, "Chain Lightning", blackholeDamage, blackholeCooldown, 1, chainLightningPs, gc));
+
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
       
     }
@@ -138,25 +144,18 @@ public class PlayerScript : MonoBehaviour
     public void AddExperience(float amount)
     {
         exp += amount;
-        if (exp >= 1.0f)
+        if (exp >= levelCap)
         {
+            levelCap = levelCap * 1.3f;
             level++;
             exp = 0f;
             uiController.GetComponent<UIController>().ChangeLevelText("Level " + level);
             uiController.GetComponent<UIController>().SetLevelSlider(0f);
             uiController.GetComponent<UIController>().ActivateLevelUpPanel();
-            foreach (Skill s in skills)
-            {
-                if (s.Name == "Lazer Riffle")
-                {
-                    s.Level++;
-                }
-
-            }
             audioController.PlayAudio(Audios.levelupsound);
             Time.timeScale = 0;
         }
-        uiController.GetComponent<UIController>().AdjustLevelSlider(amount);
+        uiController.GetComponent<UIController>().AdjustLevelSlider((exp / 1f) / (levelCap / 1f));
     }
 
     void OnCollisionEnter(Collision coll)
@@ -196,11 +195,13 @@ public class PlayerScript : MonoBehaviour
                 Resume();
                 break;
             case 2: //Max health
-                health += 100;
+                health += 150;              
                 if (health > maxHealth)
                 {
-                    health = maxHealth;
+                    health = maxHealth;                 
                 }
+                uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(health, maxHealth);
+                uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
                 Resume();
                 break;
             case 3: //Health regen

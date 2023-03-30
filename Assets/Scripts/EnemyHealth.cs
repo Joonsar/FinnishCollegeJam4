@@ -18,9 +18,18 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
+        InvokeRepeating("CheckDistance", 0, 4f);
     }
 
+    public void CheckDistance()
+    {
+        if(Vector3.Distance(transform.position, player.transform.position) > 35f)
+        {
+            print("Enemy was too far!");
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().enemies.Remove(gameObject);
+            Destroy(gameObject);
+        }
+    }
 
     public float GetMaxHitPoints()
     {

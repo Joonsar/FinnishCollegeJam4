@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 33269394285941268}
   - component: {fileID: 23906864624285808}
   - component: {fileID: -3090191277030416313}
+  - component: {fileID: 2023677935529974905}
   m_Layer: 0
   m_Name: SM_Veh_Armored_Truck_02_Hover
   m_TagString: Untagged
@@ -188,6 +189,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.878755, y: 2.218126, z: 7.0514393}
   m_Center: {x: 0, y: 1.5510281, z: -0.00000059604645}
+--- !u!208 &2023677935529974905
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114800656084530}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.439, y: 1.1090001, z: 3.5260003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.5510001, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1136252431161142
 GameObject:
   m_ObjectHideFlags: 0
