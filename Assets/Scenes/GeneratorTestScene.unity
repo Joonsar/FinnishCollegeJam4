@@ -10682,6 +10682,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1230423053423166840}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: levelsup
+      value: 
+      objectReference: {fileID: 1230423053236687699}
+    - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: followCam
       value: 
       objectReference: {fileID: 1277292755}
