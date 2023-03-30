@@ -10671,7 +10671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: exp
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: health
