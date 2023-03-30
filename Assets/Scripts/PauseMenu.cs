@@ -7,7 +7,13 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+    public Texture2D cursorTexture1;
+    public Texture2D cursorTexture2;
 
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -29,7 +35,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         gameIsPaused = false;
         AudioListener.pause = false;
-        // Cursor.lockState = CursorLockMode.Locked;
+        Cursor.SetCursor(cursorTexture2, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     void Pause()
@@ -38,7 +44,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         gameIsPaused = true;
         AudioListener.pause = true; // Pause all sounds
-                                    //  Cursor.lockState = CursorLockMode.Confined;
+        Cursor.SetCursor(cursorTexture1, Vector2.zero, CursorMode.ForceSoftware);
+
+
     }
 
     public void LoadMenu()
