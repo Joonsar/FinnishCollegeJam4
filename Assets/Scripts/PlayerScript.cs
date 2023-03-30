@@ -209,7 +209,7 @@ public class PlayerScript : MonoBehaviour
             case 4: //Damage
                 foreach (Skill s in skills)
                 {
-                    s.Damage += 2;
+                    s.Damage +=  2;
                 }
                 Resume();
                 break;
@@ -222,6 +222,7 @@ public class PlayerScript : MonoBehaviour
                     }
                     
                 }
+                health -= 200;
                 Resume();
                 break;
             case 6:
@@ -231,7 +232,9 @@ public class PlayerScript : MonoBehaviour
                     {
                         s.Level++;
                     }
+                    
                 }
+                health -= 200;
                 Resume();
                 break;
             case 7:
@@ -242,6 +245,7 @@ public class PlayerScript : MonoBehaviour
                         s.Level++;
                     }
                 }
+                health -= 200;
                 Resume();
                 break;
         }
