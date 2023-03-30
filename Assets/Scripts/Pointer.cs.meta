@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - cursorTexture: {fileID: 2800000, guid: 6d311fdd7fe8a384fb49057c5a8269e1, type: 3}
+  - cursorTexture: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
