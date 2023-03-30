@@ -19,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         InvokeRepeating("CheckDistance", 0, 4f);
+        hitPoints = hitPoints + (600 - GameObject.FindGameObjectWithTag("GameController").GetComponent<Timer>().timeRemaining) / 2;
     }
 
     public void CheckDistance()
