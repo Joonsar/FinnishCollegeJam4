@@ -209,7 +209,7 @@ public class PlayerScript : MonoBehaviour
             case 4: //Damage
                 foreach (Skill s in skills)
                 {
-                    s.Damage += 2;
+                    s.Damage +=  2;
                 }
                 Resume();
                 break;
