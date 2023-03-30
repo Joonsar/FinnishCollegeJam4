@@ -222,6 +222,7 @@ public class PlayerScript : MonoBehaviour
                     }
                     
                 }
+                health -= 200;
                 Resume();
                 break;
             case 6:
@@ -231,7 +232,9 @@ public class PlayerScript : MonoBehaviour
                     {
                         s.Level++;
                     }
+                    
                 }
+                health -= 200;
                 Resume();
                 break;
             case 7:
@@ -242,6 +245,7 @@ public class PlayerScript : MonoBehaviour
                         s.Level++;
                     }
                 }
+                health -= 200;
                 Resume();
                 break;
         }
