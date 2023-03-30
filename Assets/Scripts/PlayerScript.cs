@@ -20,6 +20,8 @@ public class PlayerScript : MonoBehaviour
 
     public ParticleSystem LazerRifflePs;
 
+    public ParticleSystem flameThrowerPs;
+
     [SerializeField] GameObject explosionPrefab;
 
     private Vector3 mousePosition;
@@ -53,6 +55,8 @@ public class PlayerScript : MonoBehaviour
         skills.Add(new Skill(skillIndex, "Chain Lightning", 30, 5f, 1, chainLightningPs, gc));
         skillIndex++;
         skills.Add(new Skill(skillIndex, "Lazer Riffle", 40, 1.35f, 1, LazerRifflePs, gc));
+        skillIndex++;
+        skills.Add(new Skill(skillIndex, "Flamethrower", 40, 2f, 1, flameThrowerPs, gc));
         uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
       
     }

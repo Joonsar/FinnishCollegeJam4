@@ -11129,6 +11129,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1230423053210749531}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: flameThrowerPs
+      value: 
+      objectReference: {fileID: 4167675929821250879, guid: c390fa0bae4c9a04183f5177f3fd74e7, type: 3}
+    - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: explosionPrefab
       value: 
       objectReference: {fileID: 191186, guid: 079954accd64b32419ec069129c81273, type: 3}
