@@ -227,7 +227,7 @@ public class PlayerScript : MonoBehaviour
             case 6:
                 foreach (Skill s in skills)
                 {
-                    if (s.Name == "Flamethrower")
+                    if (s.Name == "Chain Lightning")
                     {
                         s.Level++;
                     }
@@ -237,7 +237,7 @@ public class PlayerScript : MonoBehaviour
             case 7:
                 foreach (Skill s in skills)
                 {
-                    if (s.Name == "Chain Lightning")
+                    if (s.Name == "Flamethrower")
                     {
                         s.Level++;
                     }
