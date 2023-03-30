@@ -4556,6 +4556,7 @@ MonoBehaviour:
   buildings:
   - {fileID: 3083655928831846922, guid: 8bf52feb1d2941049ad130df25cd418c, type: 3}
   - {fileID: 3083655928831846922, guid: 78724e9aa0ab410448fc841235c9250a, type: 3}
+  - {fileID: 3083655928831846922, guid: ff7adca5d64ad624bb9ab835bf02a99c, type: 3}
   vehicles:
   - {fileID: 1254837790230190, guid: 34706970fd8733440a9c0f23206a856e, type: 3}
   - {fileID: 1344106213341860, guid: 9e3d7d4d81beecf44b4a9e5768cd8123, type: 3}
