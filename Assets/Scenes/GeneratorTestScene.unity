@@ -3066,6 +3066,7 @@ MonoBehaviour:
   - {fileID: 1230423052405948440}
   - {fileID: 1230423052526243162}
   - {fileID: 1230423051675799392}
+  levelit: {fileID: 1230423053423166840}
 --- !u!114 &858046861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10647,9 +10648,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: exp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: health
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
+      propertyPath: levelit
+      value: 
+      objectReference: {fileID: 1230423053423166840}
     - target: {fileID: 5868985452481071078, guid: ec34ae1945a1f7646a351de9ed482368, type: 3}
       propertyPath: followCam
       value: 
