@@ -126,7 +126,7 @@ public class GameController : MonoBehaviour
                 part.transform.SetParent(player.transform);
                 Destroy(part.gameObject, 2);
             }
-            audioController.PlayAudio(Audios.riffleSound);
+            audioController.PlayAudio(Audios.flamethrowsound);
         }
 
 

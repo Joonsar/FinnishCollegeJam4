@@ -224,6 +224,8 @@ public class PlayerScript : MonoBehaviour
                     
                 }
                 health -= 200;
+                uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(health, maxHealth);
+                uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth); 
                 Resume();
                 break;
             case 6:
@@ -231,11 +233,21 @@ public class PlayerScript : MonoBehaviour
                 {
                     if (s.Name == "Chain Lightning")
                     {
-                        s.Level++;
+                        if(s.Level < 4)
+                        {
+                            s.Level++;
+                        }
+                        else
+                        {
+                            s.Damage += 2;
+                        }
+                        
                     }
                     
                 }
                 health -= 200;
+                uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(health, maxHealth);
+                uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth); 
                 Resume();
                 break;
             case 7:
@@ -243,10 +255,12 @@ public class PlayerScript : MonoBehaviour
                 {
                     if (s.Name == "Flamethrower")
                     {
-                        s.Level++;
+                        s.Damage++;
                     }
                 }
                 health -= 200;
+                uiController.GetComponent<UIController>().ChangePlayerHealthbarValue(health, maxHealth);
+                uiController.GetComponent<UIController>().ChangePlayerHealthText(health, maxHealth);
                 Resume();
                 break;
         }
