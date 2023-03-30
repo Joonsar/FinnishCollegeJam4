@@ -99,11 +99,34 @@ public class GameController : MonoBehaviour
             {
                 ParticleSystem part = Instantiate(skill.Ps, player.transform.position + new Vector3(0, 1f, 0), lookRotation) as ParticleSystem;
                 part.GetComponent<ParticleCollision>().damage = skill.Damage;
+                part.transform.SetParent(player.transform);
                 Destroy(part.gameObject, 2);
             }
             audioController.PlayAudio(Audios.riffleSound);
 
 
+        }
+
+        if (skill.Name == "Flamethrower")
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, Camera.main.transform.position.y));
+            Vector3 lookDirection = mouseWorldPosition - player.transform.position;
+            //mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //mousePosition.y = transform.position.y;
+
+            //Vector3 lookDir = mousePosition - transform.position;
+            lookDirection.y = 0;
+            //Debug.Log(lookDir);
+            Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
+            for (int i = 0; i < skill.Level; i++)
+            {
+                ParticleSystem part = Instantiate(skill.Ps, player.transform.position, lookRotation * Quaternion.Euler(Vector3.up * -90)) as ParticleSystem;
+                part.GetComponent<ParticleCollision>().damage = skill.Damage;
+                part.transform.SetParent(player.transform);
+                Destroy(part.gameObject, 2);
+            }
+            audioController.PlayAudio(Audios.riffleSound);
         }
 
 
